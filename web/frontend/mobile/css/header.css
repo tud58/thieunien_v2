@@ -1,0 +1,105 @@
+header .logo-tag {
+    float: left;
+    width: calc(100% - 100px);
+}
+header .logo-tag li {
+    line-height: 70px;
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
+}
+header .logo-tag li .logo {
+    margin: auto;
+}
+
+header .logo-tag li a span {
+
+}
+
+header .search-block {
+    color: #fff;
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+header .search-block i {
+    font-size: 24px;
+}
+header .search-block input[type=text]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #ffffff;
+}
+header .search-block input[type=text]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #ffffff;
+    opacity:  1;
+}
+header .search-block input[type=text]::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #ffffff;
+    opacity:  1;
+}
+header .search-block input[type=text]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #ffffff;
+}
+header .user-social {
+    margin-top: 10px;
+}
+header .user-social li {
+    /*float: left;*/
+}
+header .user-social button {
+    border: none;
+    background: transparent;
+}
+header .user-social button img {
+    width: 30px;
+}
+
+header .user-social li a i {
+    font-size: 28px;
+}
+
+header nav ul li {
+    color: #ffffff;
+}
+header nav ul li a{
+    color: #ffffff;
+    line-height: 20px;
+    overflow: hidden;
+}
+header .navbar-nav li a i {
+    line-height: 40px;
+    font-size: 28px;
+    float: left;
+    margin-right: 5px;
+}
+header .navbar-nav li a span {
+    display: block;
+    float: left;
+}
+.collapse .navbar-nav li a span {
+    margin-top: 10px;
+}
+
+header .navbar-toggle {
+    float: left;
+    margin-top: 20px;
+}
+header .navbar-toggle .icon-bar{
+    background-color: #fff;
+    height: 4px;
+}
+header nav{
+    border-top:1px solid #fff;
+
+}
+header nav .no-collapse {
+    overflow: scroll;
+}
+header nav .no-collapse ul{
+    height: 60px;
+    width:2000px;
+}
+header nav .no-collapse ul li {
+    float: left;
+
+}

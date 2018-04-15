@@ -1,0 +1,110 @@
+.right-block h3 strong.text-gradiant{
+    width: 100%;
+    left: 0;
+	font-weight: bold;
+	font-size: 23px;
+    color:#ed2e7d;
+}
+
+#carousel-home .carousel-caption{
+    position: relative;
+    text-align: left;
+    left: 0;
+    color: #000000;
+    text-shadow: none;
+}
+#carousel-home .carousel-indicators {
+    top: -30px;
+    right: -5px;
+    left: auto;
+    width: auto;
+    bottom: auto;
+}
+
+.group-news-2 .firt-news-item strong {
+    display: block;
+    font-size: 18px;
+    line-height: 1.2;
+    margin: 10px 0;
+    height: 65px;
+    overflow: hidden;
+}
+.group-news-2 ul,.group-news-3 ul {
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 0;
+}
+.group-news-2 ul li{
+    border-top: 2px solid #e9ebee;
+    padding: 10px 0;
+    height: 80px;
+    overflow: hidden;
+}
+.group-news-2 ul li a{
+    font-size: 18px;
+    line-height: 1;
+}
+
+.parent-group-news-4 {
+    background: #f5f5f5;
+    padding: 5px 20px;
+    border-radius: 6px;
+}
+
+.parent-group-news-4 h3 {
+    height: auto;
+    text-align: center;
+}
+
+.parent-group-news-4 h3 strong {
+    color: #222;
+    width: 100%;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+/*Block right*/
+.right-news-list li {
+    margin-bottom: 3px;
+    display: inline-block;
+}
+.right-news-list li a {
+    font-size: 12px;
+}
+.right-news-list li img{
+    width: 65%;
+    padding-right: 6px;
+    float: left;
+}
+.right-news-list li strong{
+    width: calc(35% - 5px);
+    display: block;
+    float: left;
+    line-height: 19px;
+    /*text-align: justify;*/
+}
+#focus-week .tabs-header {
+    margin-bottom: 5px;
+    display: inline-block;
+}
+#focus-week .tabs-header li{
+    float: left;
+    font-family: "Averta Bold";
+    margin: 0px 10px;
+}
+#focus-week .tabs-header li a{
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 12px;
+}
+#focus-week, #business-news {
+    border: 1px solid #e6e5e5;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+	padding-top: 0;
+}
+
+.video-block {
+    margin: 0px 10px 10px 0px;
+}

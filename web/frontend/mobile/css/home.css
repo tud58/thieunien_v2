@@ -1,0 +1,118 @@
+.right-block h3 strong.text-gradiant{
+    width: 100%;
+    left: 0;
+}
+
+#carousel-home .carousel-caption{
+    position: relative;
+    text-align: left;
+    left: 0;
+    color: #000000;
+    text-shadow: none;
+}
+#carousel-home .carousel-indicators {
+    top: -30px;
+    right: 10px;
+    left: auto;
+    width: auto;
+    bottom: auto;
+}
+#carousel-home .carousel-indicators li {
+    border: #000000 1px solid;
+
+}
+
+.group-news-2 .firt-news-item strong {
+    display: block;
+    line-height: 36px;
+    font-size: 24px;
+}
+.group-news-2 ul,.group-news-3 ul {
+    padding-left: 15px;
+}
+.group-news-2 ul li a{
+    line-height: 36px;
+    font-size: 18px;
+}
+.parent-group-news-4 {
+    border-left: 1px solid #e6e5e5;
+}
+
+/*Block right*/
+.right-news-list li {
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.right-news-list li a {
+    font-size: 12px;
+}
+.right-news-list li img{
+    width: 60%;
+    padding-right: 10px;
+    float: left;
+}
+.right-news-list li strong{
+    width: calc(40% - 10px);
+    display: block;
+    float: left;
+}
+#focus-week .tabs-header {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+#focus-week .tabs-header li{
+    float: left;
+    font-family: "Averta Bold";
+}
+#focus-week .tabs-header li a{
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 12px;
+}
+#focus-week, #business-news {
+    border: 1px solid #e6e5e5;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*mobile*/
+.tab-list-home {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.tab-list-home li{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.tab-list-home li.last {
+    border-right: none;
+}
+#focus-day .focus-day-other .news-item {
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#focus-day .focus-day-other img {
+    width: 180px;
+    height: 135px;
+    float: left;
+    margin-right: 10px;
+}
+#focus-day .focus-day-other h5 {
+    width: calc(100% - 190px);
+    float: left;
+}
+.category-block {
+    position: relative;
+}
+.category-block h4 {
+    display: block;
+    margin-bottom: 10px;
+}
+.video-block h4 {
+    display: block;
+    margin-bottom: 10px;
+}
+

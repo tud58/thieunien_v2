@@ -1,0 +1,16 @@
+footer .footer-info a{
+    color: #ffffff;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+footer .footer-info .footer-set-homepage {
+    position: absolute;
+    top: 60px;
+    left: 175px;
+}
+footer .footer-info .footer-set-homepage i{
+    font-size: 22px;
+}
+footer .footer-info p {
+    margin-top: 20px;
+}

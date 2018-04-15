@@ -1,0 +1,109 @@
+header .logo-tag li {
+    line-height: 70px;
+    float: left;
+    padding-left: 10px;
+    /*padding-right: 10px;*/
+}
+header .logo-tag li .logo {
+    margin-right: 80px;
+}
+header .logo-tag li a span {
+
+}
+header .search-block i {
+    font-size: 23px;
+}
+
+input:focus {
+	outline: none;
+}
+header .search-block input[type=text]::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #ffffff;
+}
+header .search-block input[type=text]:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #ffffff;
+    opacity:  1;
+}
+header .search-block input[type=text]::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #ffffff;
+    opacity:  1;
+}
+header .search-block input[type=text]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color:    #ffffff;
+}
+header .user-social {
+    /*margin-top: 10px;*/
+}
+header .user-social>li {
+    float: left;
+}
+header .user-social button {
+    border: none;
+    background: transparent;
+}
+header .user-social button img {
+    width: 30px;
+}
+
+
+header .user-social li a i {
+    font-size: 22px;
+}
+
+header nav ul {
+    position: relative;
+    width: 100%;
+}
+header nav ul li a{
+    color: #ffffff;
+    line-height: 20px;
+    overflow: hidden;
+}
+header .navbar-nav li a {
+    font-family: "Averta Bold";
+    padding: 0 2px 0 12px;
+    align-items: center;
+    display: flex;
+    line-height: 40px;
+}
+header .navbar-nav li a i {
+    line-height: 40px;
+    font-size: 28px;
+    float: left;
+    margin-right: 5px;
+}
+header .navbar-nav li a strong {
+    display: block;
+    float: left;
+    /*max-width: 110px;*/
+}
+header .navbar-nav li.pull-right {
+    position: absolute;
+    right: 0;
+}
+
+header .navbar-nav li .dropdown-menu li a {
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+#bs-example-navbar-collapse-1{
+    padding-left: 0;
+    padding-right: 0;
+}
+#formSearchHead{
+	float: left;
+}
+.nav>li>a:focus, .nav>li>a:hover,.nav>li>a:active,.nav>li>a:visited,.nav>li>a:link, .nav .open>a, .nav .open>a:focus, .nav .open>a:hover{
+	background-color: rgba(0,0,0,0);
+    text-decoration: none;
+    color: #fff;
+}
+header .navbar-nav li .dropdown-menu li a {
+    font-size: 12px;
+}
+header .navbar-nav li .dropdown-menu li a:hover{
+	background-color: rgba(0,0,0,0);
+    text-decoration: none;
+
+}

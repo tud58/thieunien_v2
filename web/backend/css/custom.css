@@ -1,0 +1,45 @@
+/**
+ *
+ * Apply Here your Custom CSS
+ *
+*/
+
+body {
+
+}
+
+.form-control {
+    box-shadow: none;
+}
+
+.text-break {
+    word-break: break-all;
+}
+
+.add-button {
+    margin-bottom: 10px;
+}
+
+.quick-add-tag__remove {
+    color: #999;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.quick-add-tag__remove:hover {
+    color: #333;
+}
+
+.ads-code.type-0, .ads-code.type-, .ads-banner.type-1, #ads-content.type-1, #ads-multi-content.type-0, #ads-multi-content.type- {
+    display: none;
+}
+
+.ads-code.type-1,.ads-banner.type-0,.ads-banner.type-, #ads-multi-content.type-1, #ads-content.type-0, #ads-content.type- {
+    display: block;
+}
+
+img{
+    max-width: 100%;
+}

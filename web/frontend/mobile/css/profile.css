@@ -1,0 +1,66 @@
+#profile-menu-left {
+    min-height: 600px;
+    padding-right: 15px;
+    border-right: 1px solid #e6e5e5;
+    padding-top: 20px;
+}
+#profile-menu-left ul li {
+    line-height: 40px;
+    color: #000000;
+    border-bottom: 1px solid #e6e5e5;
+}
+#profile-menu-left ul li i {
+    font-size: 24px;
+}
+
+#profile-menu-left ul li a {
+    position: absolute;
+    line-height: 40px;
+    left: 50px;
+}
+
+.register-block {
+    width: 300px;
+    padding: 15px;
+    border: 1px solid #e6e5e5;
+    border-radius: 5px;
+    color: #000000;
+    margin: 30px auto;
+}
+
+.register-block img{
+    width: auto;
+    margin-top: 5px;
+}
+
+.profile-tab {
+}
+.profile-tab li {
+    line-height: 40px;
+    border-bottom: 2px solid #e6e5e5;
+}
+
+.tab-content .tab-pane {
+    padding-top: 20px;
+    font-family: 'Averta Bold';
+}
+.tab-content.user-setting .tab-pane {
+    border: 1px solid #e6e5e5;
+    border-radius: 5px;
+    background-color: #fcfcff;
+    padding: 15px;
+    font-family: Averta;
+    margin-top: 20px;
+}
+.tab-content.user-setting .tab-pane label{
+    font-family: 'Averta Bold';
+}
+.tab-content.user-setting img.avatar {
+    width: 80px;
+}
+.tab-content.user-setting h4 {
+    margin-left: 15px;
+    margin-right: 15px;
+    border-bottom: 2px solid #e6e5e5;
+    color: #a5cae4;
+}

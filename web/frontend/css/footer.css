@@ -1,0 +1,80 @@
+footer {
+    padding-bottom: 30px;
+}
+
+footer .footer-info .footer-set-homepage i {
+    font-size: 22px;
+    margin-right: 2px;
+}
+
+footer .footer-info p {
+    margin-top: 20px;
+}
+
+footer h4 {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.footer-set-homepage {
+    padding: 12px 0;
+}
+
+.footer-set-homepage a {
+    color: #222222;
+}
+
+footer .comment-user {
+    padding: 12px 0;
+}
+
+.border-box {
+    height: 60px;
+    padding-top: 18px;
+    border-left: 2px solid #e9ebee;
+    padding-left: 15px;
+    margin-left: -15px;
+}
+
+.comment-user .border-box {
+    padding-top: 0;
+}
+
+footer .footer-content .top {
+    border-bottom: 2px solid #e9ebee;
+}
+
+footer .c-a-c {
+    font-size: 18px;
+    color: #828282;
+}
+
+footer .c-a-c strong {
+    color: #222;
+}
+
+footer .note {
+    color: #111;
+}
+
+footer .bdr {
+    border-right: 2px solid #e9ebee;
+}
+
+footer .bdl {
+    border-left: 2px solid #e9ebee;
+}
+
+footer .note.bdr {
+    margin-right: -18px;
+}
+
+footer .note.bdl {
+    margin-left: -18px;
+    padding-left: 15px;
+}
+
+footer .block-content {
+    padding-top: 15px;
+    margin-top: 10px;
+}
