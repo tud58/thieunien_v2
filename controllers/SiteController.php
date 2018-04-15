@@ -108,6 +108,7 @@ class SiteController extends BaseController
                 }
                 $cache->set('news_category_home_' . $c->id, $newsCategory, 30);
             }
+//            var_dump($newsCategory); die();
             foreach ($newsCategory as $nc) {
                 if (empty($nc->logo))
                     $nc->logo = '/frontend/img/news-item.jpg';
