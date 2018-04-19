@@ -81,6 +81,7 @@ class DefaultController extends \app\controllers\BaseController
      */
     public function actionLogin()
     {
+//        echo Yii::$app->security->generatePasswordHash('123456'); die();
         
         if(Yii::$app->user->id > 0){
             return $this->goBack(Yii::$app->getModule("user")->loginRedirect);
@@ -99,7 +100,7 @@ class DefaultController extends \app\controllers\BaseController
             Yii::$app->session->set('redirectUrl', Yii::$app->request->getReferrer());
         }
   
-        if ($model->load($post) && $model->validate()) {    
+        if ($model->load($post) && $model->validate()) {
             
             $returnUrl = $this->performLogin($model->getUser(), $model->rememberMe);
             

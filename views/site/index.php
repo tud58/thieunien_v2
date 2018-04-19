@@ -242,18 +242,8 @@ $this->title = 'Thiếu niên';
 <div class="left-block">
 <?php if (isset($lefts[0]) && $lefts[0]->news) { ?>
     <section id="focus-day">
-<!--        <h3 class="text-uppercase">-->
-<!--            <a href="/danh-muc/--><?//= $lefts[0]['slug'] ?><!--">-->
-<!--                <i class="--><?//= $lefts[0]->icon ?><!--" aria-hidden="true"></i>-->
-<!--                <strong class="text-gradiant">-->
-<!--                    --><?//= $lefts[0]->name ?>
-<!--                </strong>-->
-<!--            </a>-->
-<!--        </h3>-->
         <h3 class="text-uppercase df">
             <a href="/danh-muc/<?= $lefts[0]['slug'] ?>">
-                <!--                <i class="--><?//= $lefts[1]->icon ?><!--" aria-hidden="true"></i>-->
-                <!--                <strong class="text-gradiant"> --><?//= $lefts[1]->name ?><!--</strong>-->
                 <span class="category-parent"><strong> <?= $lefts[0]->name ?></strong></span>
             </a>
             <?php if (isset($this->params['categoryChild'][$lefts[0]->id])) { ?>
@@ -501,8 +491,6 @@ $this->title = 'Thiếu niên';
     <section id="group-news-0-1">
         <h3 class="text-uppercase df">
             <a href="/danh-muc/<?= $lefts[1]['slug'] ?>">
-<!--                <i class="--><?//= $lefts[1]->icon ?><!--" aria-hidden="true"></i>-->
-<!--                <strong class="text-gradiant"> --><?//= $lefts[1]->name ?><!--</strong>-->
                 <span class="category-parent"><strong> <?= $lefts[1]->name ?></strong></span>
             </a>
             <?php if (isset($this->params['categoryChild'][$lefts[1]->id])) { ?>
@@ -566,8 +554,6 @@ $this->title = 'Thiếu niên';
             </div>
         </div>
         <?php if (count($lefts[1]->news) > 3) { ?>
-<!--            <a class="border-gradiant-round border-radius-12 text-uppercase other-news">Đọc thêm<span-->
-<!--                    class="text-gradiant">Đọc thêm</span></a>-->
             <div id="group-news-slide-1" class="owl-carousel home">
 
                 <?php foreach ($lefts[1]->news as $k => $n) { ?>
@@ -596,17 +582,9 @@ $this->title = 'Thiếu niên';
 
 <?php if (isset($lefts[2]) && $lefts[2]->news) { ?>
     <section id="group-news-0-2">
-<!--        <h3 class="text-uppercase">-->
-<!--            <a href="/danh-muc/--><?//= $lefts[2]['slug'] ?><!--">-->
-<!--                <i class="--><?//= $lefts[2]->icon ?><!--" aria-hidden="true"></i>-->
-<!--                <strong class="text-gradiant"> --><?//= $lefts[2]->name ?><!--</strong>-->
-<!--            </a>-->
-<!--        </h3>-->
         <h3 class="text-uppercase df">
             <a href="/danh-muc/<?= $lefts[2]['slug'] ?>">
-                <!--                <i class="--><?//= $lefts[1]->icon ?><!--" aria-hidden="true"></i>-->
-                <!--                <strong class="text-gradiant"> --><?//= $lefts[1]->name ?><!--</strong>-->
-                <span class="category-parent"><strong> <?= $lefts[2]->name ?></strong></span>
+              <span class="category-parent"><strong> <?= $lefts[2]->name ?></strong></span>
             </a>
             <?php if (isset($this->params['categoryChild'][$lefts[2]->id])) { ?>
                 <?php foreach ($this->params['categoryChild'][$lefts[2]->id] as $k => $c) { ?>
@@ -696,16 +674,8 @@ $this->title = 'Thiếu niên';
 
 <?php if (isset($lefts[3]) && $lefts[3]->news) { ?>
     <section id="group-news-0-2">
-        <!--        <h3 class="text-uppercase">-->
-        <!--            <a href="/danh-muc/--><?//= $lefts[2]['slug'] ?><!--">-->
-        <!--                <i class="--><?//= $lefts[2]->icon ?><!--" aria-hidden="true"></i>-->
-        <!--                <strong class="text-gradiant"> --><?//= $lefts[2]->name ?><!--</strong>-->
-        <!--            </a>-->
-        <!--        </h3>-->
         <h3 class="text-uppercase df">
             <a href="/danh-muc/<?= $lefts[3]['slug'] ?>">
-                <!--                <i class="--><?//= $lefts[1]->icon ?><!--" aria-hidden="true"></i>-->
-                <!--                <strong class="text-gradiant"> --><?//= $lefts[1]->name ?><!--</strong>-->
                 <span class="category-parent"><strong> <?= $lefts[3]->name ?></strong></span>
             </a>
             <?php if (isset($this->params['categoryChild'][$lefts[3]->id])) { ?>
@@ -796,16 +766,8 @@ $this->title = 'Thiếu niên';
 
 <?php if (isset($lefts[4]) && $lefts[4]->news) { ?>
     <section id="group-news-1">
-<!--        <h3 class="text-uppercase">-->
-<!--            <a href="/danh-muc/--><?//= $lefts[3]['slug'] ?><!--">-->
-<!--                <i class="--><?//= $lefts[3]->icon ?><!--" aria-hidden="true"></i>-->
-<!--                <strong class="text-gradiant"> --><?//= $lefts[3]->name ?><!--</strong>-->
-<!--            </a>-->
-<!--        </h3>-->
-        <h3 class="text-uppercase df">
+<h3 class="text-uppercase df">
             <a href="/danh-muc/<?= $lefts[4]['slug'] ?>">
-                <!--                <i class="--><?//= $lefts[1]->icon ?><!--" aria-hidden="true"></i>-->
-                <!--                <strong class="text-gradiant"> --><?//= $lefts[1]->name ?><!--</strong>-->
                 <span class="category-parent"><strong> <?= $lefts[4]->name ?></strong></span>
             </a>
             <?php if (isset($this->params['categoryChild'][$lefts[4]->id])) { ?>
@@ -844,16 +806,8 @@ $this->title = 'Thiếu niên';
 <hr class="w2 m10"/>
 <?php if (isset($lefts[5]) && $lefts[5]->news) { ?>
     <section id="group-news-0-2">
-        <!--        <h3 class="text-uppercase">-->
-        <!--            <a href="/danh-muc/--><?//= $lefts[2]['slug'] ?><!--">-->
-        <!--                <i class="--><?//= $lefts[2]->icon ?><!--" aria-hidden="true"></i>-->
-        <!--                <strong class="text-gradiant"> --><?//= $lefts[2]->name ?><!--</strong>-->
-        <!--            </a>-->
-        <!--        </h3>-->
         <h3 class="text-uppercase df">
             <a href="/danh-muc/<?= $lefts[5]['slug'] ?>">
-                <!--                <i class="--><?//= $lefts[1]->icon ?><!--" aria-hidden="true"></i>-->
-                <!--                <strong class="text-gradiant"> --><?//= $lefts[1]->name ?><!--</strong>-->
                 <span class="category-parent"><strong> <?= $lefts[5]->name ?></strong></span>
             </a>
             <?php if (isset($this->params['categoryChild'][$lefts[5]->id])) { ?>
@@ -1348,8 +1302,6 @@ $this->title = 'Thiếu niên';
         <section id="group-news-3-1" class="group-news-3">
             <h3 class="text-uppercase df">
                 <a href="/danh-muc/<?= $lefts[9]['slug'] ?>">
-                    <!--                <i class="--><?//= $lefts[1]->icon ?><!--" aria-hidden="true"></i>-->
-                    <!--                <strong class="text-gradiant"> --><?//= $lefts[1]->name ?><!--</strong>-->
                     <span class="category-parent"><strong> <?= $lefts[9]->name ?></strong></span>
                 </a>
                 <?php if (isset($this->params['categoryChild'][$lefts[9]->id])) { ?>
