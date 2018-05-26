@@ -63,7 +63,7 @@ $this->registerJsFile("frontend/js/img_compare.js", ['depends' => [\yii\web\Jque
                                 <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                     <a <?php if ($ads[81]->url){ ?>href="<?= $ads[81]->url ?>"<?php } ?> class="ads"
                                        target="_blank">
-                                        <img src="<?= $ai ?>">
+                                        <img src="<?= HOST. $ai ?>">
                                     </a>
                                 </div>
                             <?php } ?>
@@ -110,7 +110,7 @@ $this->registerJsFile("frontend/js/img_compare.js", ['depends' => [\yii\web\Jque
                                                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                                             <a <?php if ($ads[$keyAds]->url){ ?>href="<?= $ads[$keyAds]->url ?>"<?php } ?> class="ads"
                                                                target="_blank">
-                                                                <img src="<?= $ai ?>">
+                                                                <img src="<?= HOST. $ai ?>">
                                                             </a>
                                                         </div>
                                                     <?php } ?>
@@ -168,7 +168,7 @@ $this->registerJsFile("frontend/js/img_compare.js", ['depends' => [\yii\web\Jque
                             <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                 <a <?php if ($ads[82]->url){ ?>href="<?= $ads[82]->url ?>"<?php } ?> class="ads"
                                    target="_blank">
-                                    <img src="<?= $ai ?>">
+                                    <img src="<?= HOST. $ai ?>">
                                 </a>
                             </div>
                         <?php } ?>

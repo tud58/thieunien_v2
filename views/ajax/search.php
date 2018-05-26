@@ -3,7 +3,7 @@
         <div class="focus-day-other">
             <div class="news-item">
                 <a href="/tin-tuc/<?=$n->slug ?>">
-                    <img src="<?=$n->logo ?>">
+                    <img src="<?= HOST.$n->logo ?>">
                     <h5><strong class="f-title"><?=$n->title ?></strong></h5>
                 </a>
             </div>
@@ -15,7 +15,7 @@
             <div class="news-item">
                 <div class="embed-responsive embed-responsive-16by9">
                     <a href="/tin-tuc/<?=$n->slug ?>">
-                        <img src="<?=$n->logo ?>" alt="...">
+                        <img src="<?= HOST.$n->logo ?>" alt="...">
                     </a>
                 </div>
                 <a href="/tin-tuc/<?=$n->slug ?>">

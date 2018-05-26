@@ -11,7 +11,7 @@ use app\helper\Functions;
 			<?php if ($k < 4) { ?>
 				<li>
 					<a href="/tin-tuc/<?= $n->slug ?>">
-						<img src="<?= $n->logo ?>">
+						<img src="<?= HOST. $n->logo ?>">
 						<strong class="f-title">
 							<?= $n->title . Functions::getNewsIcon($n->type) ?>
 						</strong>

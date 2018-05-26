@@ -57,12 +57,12 @@ class RssController extends BaseController
 
 			  </header>' . $news->content;
 			 
-			$news->content = $news->content . '<br /><a href="http://hoahoctro.vn"><b>Hoahoctro.vn</b></a><figure class="op-ad">
+			$news->content = $news->content . '<br /><a href="http://thieunien.abc"><b>thieunien.abc</b></a><figure class="op-ad">
 			  <iframe width="300" height="250" style="border:0; margin:0;" src="https://www.facebook.com/adnw_request?placement=682643075241320_733946226777671&adtype=banner300x250"></iframe>
 			</figure>
 			
 			<figure class="op-tracker">
-			  <iframe src="http://hoahoctro.vn/news/update-view-count?news_id='.$news->id.'">
+			  <iframe src="http://thieunien.abc/news/update-view-count?news_id='.$news->id.'">
 
 			  </iframe>
 			</figure>
@@ -93,15 +93,15 @@ class RssController extends BaseController
 				'title' =>  htmlspecialchars(strip_tags(html_entity_decode($news->title))),
 				'description' => htmlspecialchars(strip_tags(html_entity_decode($news->description))),
 				'content' => $news->content,
-				'author' => 'hoahoctro.vn',
-				'url' => 'http://hoahoctro.vn/tin-tuc/' . $news->slug,
+				'author' => 'thieunien.abc',
+				'url' => 'http://thieunien.abc/tin-tuc/' . $news->slug,
 				'date' => date('r', $news->publish_time)
 			];
 		}
 		
 		$rss = new RSS;
 		$rss->title = 'RSS Hoa Học Trò';
-		$rss->url = 'http://hoahoctro.vn/rss';
+		$rss->url = 'http://thieunien.abc/rss';
 		$rss->description = $rss->title;
 		$rss->date = $items[0]['date'];
 		$rss->items = $items;

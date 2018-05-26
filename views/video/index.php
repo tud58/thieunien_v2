@@ -37,7 +37,7 @@ $this->registerJs("infinity('video');", \yii\web\View::POS_END, 'my-options');
                     <div class="news-item">
                         <div class="embed-responsive embed-responsive-16by9 video-icon">
                             <a href="/video/<?=$videos[1]->slug ?>">
-                                <img src="<?=$videos[1]->logo ?>">
+                                <img src="<?= HOST.$videos[1]->logo ?>">
                             </a>
                         </div>
                         <a href="/video/<?=$videos[1]->slug ?>">
@@ -53,7 +53,7 @@ $this->registerJs("infinity('video');", \yii\web\View::POS_END, 'my-options');
                     <div class="news-item">
                         <div class="embed-responsive embed-responsive-16by9 video-icon">
                             <a href="/video/<?=$videos[2]->slug ?>">
-                                <img src="<?=$videos[2]->logo ?>">
+                                <img src="<?= HOST.$videos[2]->logo ?>">
                             </a>
                         </div>
                         <a href="/video/<?=$videos[2]->slug ?>">
@@ -85,7 +85,7 @@ $this->registerJs("infinity('video');", \yii\web\View::POS_END, 'my-options');
                             <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                 <a <?php if ($ads[21]->url){ ?>href="<?= $ads[21]->url ?>"<?php } ?> class="ads-custom"
                                    target="_blank">
-                                    <img src="<?= $ai ?>">
+                                    <img src="<?= HOST. $ai ?>">
                                 </a>
                             </div>
                         <?php } ?>
@@ -113,7 +113,7 @@ $this->registerJs("infinity('video');", \yii\web\View::POS_END, 'my-options');
                         <div class="news-item">
                             <div class="embed-responsive embed-responsive-16by9 video-icon">
                                 <a href="/video/<?=$v->slug ?>">
-                                    <img src="<?=$v->logo ?>">
+                                    <img src="<?= HOST.$v->logo ?>">
                                 </a>
                             </div>
                             <a href="/video/<?=$v->slug ?>">
@@ -153,7 +153,7 @@ $this->registerJs("infinity('video');", \yii\web\View::POS_END, 'my-options');
                                     <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                         <a <?php if ($a->url){ ?>href="<?= $a->url ?>"<?php } ?> class="ads"
                                            target="_blank">
-                                            <img src="<?= $ai ?>">
+                                            <img src="<?= HOST. $ai ?>">
                                         </a>
                                     </div>
                                 <?php } ?>

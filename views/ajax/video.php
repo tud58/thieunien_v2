@@ -2,7 +2,7 @@
     <?php foreach($videos as $k => $v){ ?>
         <div class="news-item">
             <a href="/clip/<?=$v->slug ?>" class="video-cover">
-                <img src="<?=$v->logo ?>">
+                <img src="<?= HOST.$v->logo ?>">
             </a>
             <a href="/clip/<?=$v->slug ?>">
                 <h5><strong class="f-title"><?=$v->title ?></strong></h5>
@@ -15,7 +15,7 @@
             <div class="news-item">
                 <div class="embed-responsive embed-responsive-16by9 video-icon">
                     <a href="/clip/<?=$v->slug ?>">
-                        <img src="<?=$v->logo ?>">
+                        <img src="<?= HOST.$v->logo ?>">
                     </a>
                 </div>
                 <a href="/clip/<?=$v->slug ?>">

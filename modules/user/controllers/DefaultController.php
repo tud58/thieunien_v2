@@ -82,30 +82,31 @@ class DefaultController extends \app\controllers\BaseController
     public function actionLogin()
     {
 //        echo Yii::$app->security->generatePasswordHash('123456'); die();
-        
+//        var_dump(Yii::$app->user); die();
+
         if(Yii::$app->user->id > 0){
             return $this->goBack(Yii::$app->getModule("user")->loginRedirect);
-        } 
+        }
         /** @var \app\modules\user\models\forms\LoginForm $model */
         $model = $this->module->model("LoginForm");
 
         $redirectUrl = Yii::$app->request->get('ref', '');
-        
+
         // load post data and login
         $post = Yii::$app->request->post();
-        
+
+
         if(!$post && $redirectUrl){
             Yii::$app->session->set('redirectUrl', $redirectUrl);
         }else if(!$post && Yii::$app->request->getReferrer()){
             Yii::$app->session->set('redirectUrl', Yii::$app->request->getReferrer());
         }
-  
+
         if ($model->load($post) && $model->validate()) {
-            
             $returnUrl = $this->performLogin($model->getUser(), $model->rememberMe);
-            
+
             $redirectUrl = !empty(Yii::$app->session->get('redirectUrl'))?Yii::$app->session->get('redirectUrl'):null;
-            
+
             if($redirectUrl != ''){
                 return $this->redirect($redirectUrl);
             }else{
@@ -191,12 +192,15 @@ class DefaultController extends \app\controllers\BaseController
     {
         // log user in
         $loginDuration = $rememberMe ? $this->module->loginDuration : 0;
+
         Yii::$app->user->login($user, $loginDuration);
 
         // check for a valid returnUrl (to prevent a weird login bug)
         //   https://github.com/amnah/yii2-user/issues/115
         $loginRedirect = $this->module->loginRedirect;
+
         $returnUrl = Yii::$app->user->getReturnUrl($loginRedirect);
+
         if (strpos($returnUrl, "user/login") !== false || strpos($returnUrl, "user/logout") !== false) {
             $returnUrl = null;
         }
@@ -225,6 +229,7 @@ class DefaultController extends \app\controllers\BaseController
         if(Yii::$app->user->id > 0){
             return $this->goBack(Yii::$app->getModule("user")->loginRedirect);
         }
+
         // set up new user/profile objects
         $user = $this->module->model("User", ["scenario" => "register"]);
         $profile = $this->module->model("Profile");

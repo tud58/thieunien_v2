@@ -40,7 +40,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                     <a <?php if ($ads[41]->url){ ?>href="<?= $ads[41]->url ?>"<?php } ?> class="ads"
                                        target="_blank">
-                                        <img src="<?= $ai ?>">
+                                        <img src="<?= HOST. $ai ?>">
                                     </a>
                                 </div>
                             <?php } ?>
@@ -89,7 +89,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                     <a <?php if ($ads[42]->url){ ?>href="<?= $ads[42]->url ?>"<?php } ?> class="ads"
                                        target="_blank">
-                                        <img src="<?= $ai ?>">
+                                        <img src="<?= HOST. $ai ?>">
                                     </a>
                                 </div>
                             <?php } ?>
@@ -169,7 +169,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php foreach($newsSame as $k => $n){?>
                 <?php if ($k < 10){ ?>
                     <a href="/tin-tuc/<?=$n->slug ?>" class="col-sm-3 col-xs-6">
-                        <img src="<?=($n->logo) ? $n->logo : '/frontend/img/news-item.jpg'; ?>">
+                        <img src="<?= HOST.($n->logo) ? $n->logo : '/frontend/img/news-item.jpg'; ?>">
                         <h5>
                             <strong>
                                 <?=$n->title . Functions::getNewsIcon($n->type) ?>

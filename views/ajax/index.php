@@ -2,7 +2,7 @@
     <?php foreach($news as $k => $n){ ?>
         <div class="news-item">
             <a href="/tin-tuc/<?=$n->slug ?>">
-                <img src="<?=$n->logo ?>">
+                <img src="<?= HOST.$n->logo ?>">
                 <h5><strong class="f-title"><?=$n->title ?></strong></h5>
             </a>
         </div>
@@ -12,7 +12,7 @@
         <div class="news-item">
             <div class="col-md-4">
                 <a href="/tin-tuc/<?=$n->slug ?>">
-                    <img src="<?=($n->logo) ? $n->logo : '/frontend/img/news-item.jpg'; ?>" alt="...">
+                    <img src="<?= HOST.($n->logo) ? $n->logo : '/frontend/img/news-item.jpg'; ?>" alt="...">
                 </a>
             </div>
             <div class="col-md-8">

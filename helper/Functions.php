@@ -171,7 +171,7 @@ class Functions{
                                     'body'=>$data['body'],
                                     'show_in_foreground'=> true,
                                     'click_action'=>$click_action,
-                                    // 'thumb'=>($data['logo']) ? $data['logo'] : 'http://hoahoctro.vn/frontend/img/news-item.jpg';
+                                    // 'thumb'=>($data['logo']) ? $data['logo'] : 'http://thieunien.abc/frontend/img/news-item.jpg';
 
             ),
             'data'=>array('extra'=>$data['id'])

@@ -22,7 +22,7 @@ $this->title = 'Hoa học trò';
                         <?php if ($kn == 0){ ?>
                             <div class="news-item first">
                                 <a href="/tin-tuc/<?=$n->slug ?>">
-                                    <img src="<?=$n->logo ?>">
+                                    <img src="<?= HOST.$n->logo ?>">
                                 </a>
                                 <h5>
                                     <a href="/danh-muc/<?=$c['slug'] ?>">
@@ -45,7 +45,7 @@ $this->title = 'Hoa học trò';
                             <div class="focus-day-other">
                                 <div class="news-item">
                                     <a href="/tin-tuc/<?=$n->slug ?>">
-                                        <img src="<?=$n->logo ?>">
+                                        <img src="<?= HOST.$n->logo ?>">
                                         <h5><strong><?=$n->title ?></strong></h5>
                                     </a>
                                 </div>
@@ -72,7 +72,7 @@ $this->title = 'Hoa học trò';
                                     <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                         <a <?php if ($ads[$keyAds]->url){ ?>href="<?= $ads[$keyAds]->url ?>"<?php } ?> class="ads-custom"
                                            target="_blank">
-                                            <img src="<?= $ai ?>">
+                                            <img src="<?= HOST. $ai ?>">
                                         </a>
                                     </div>
                                 <?php } ?>
@@ -99,7 +99,7 @@ $this->title = 'Hoa học trò';
 		</h4>
 		<div class="video-icon">
 			<a href="/clip/<?=$videos[0]->slug ?>">
-				<img src="<?=$videos[0]->logo ?>">
+				<img src="<?= HOST.$videos[0]->logo ?>">
 			</a>
 			<a href="/clip/<?=$videos[0]->slug ?>">
 				<h4><strong><?=$videos[0]->title ?></strong></h4>

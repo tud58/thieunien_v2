@@ -26,7 +26,7 @@ $this->registerJs("infinity('category');", \yii\web\View::POS_END, 'my-options')
                     <?php if (isset($news[0])){ ?>
                         <div class="news-first-item">
                             <a href="/tin-tuc/<?=$news[0]->slug ?>">
-                                <img src="<?=$news[0]->logo ?>" alt="...">
+                                <img src="<?= HOST.$news[0]->logo ?>" alt="...">
                             </a>
                             <div class="news-first-item-info">
                                 <h4>
@@ -47,7 +47,7 @@ $this->registerJs("infinity('category');", \yii\web\View::POS_END, 'my-options')
                     <?php if (isset($news[1])){ ?>
                         <div class="news-item">
                             <a href="/tin-tuc/<?=$news[1]->slug ?>">
-                                <img src="<?=$news[1]->logo ?>">
+                                <img src="<?= HOST.$news[1]->logo ?>">
                                 <h5>
                                     <strong class="f-title">
                                         <?=$news[1]->title ?>
@@ -59,7 +59,7 @@ $this->registerJs("infinity('category');", \yii\web\View::POS_END, 'my-options')
                     <?php if (isset($news[2])){ ?>
                         <div class="news-item">
                             <a href="/tin-tuc/<?=$news[2]->slug ?>">
-                                <img src="<?=$news[2]->logo ?>">
+                                <img src="<?= HOST.$news[2]->logo ?>">
                                 <h5>
                                     <strong class="f-title">
                                         <?=$news[2]->title ?>
@@ -78,7 +78,7 @@ $this->registerJs("infinity('category');", \yii\web\View::POS_END, 'my-options')
                         <div class="item">
                             <div class="">
                                 <a href="/tin-tuc/<?=$n->slug ?>">
-                                    <img src="<?=$n->logo ?>">
+                                    <img src="<?= HOST.$n->logo ?>">
                                 </a>
                             </div>
                             <a href="/tin-tuc/<?=$n->slug ?>">
@@ -101,7 +101,7 @@ $this->registerJs("infinity('category');", \yii\web\View::POS_END, 'my-options')
                     <div class="news-item">
                         <div class="col-md-4">
                             <a href="/tin-tuc/<?=$n->slug ?>">
-                                <img src="<?=$n->logo ?>" alt="...">
+                                <img src="<?= HOST.$n->logo ?>" alt="...">
                             </a>
                         </div>
                         <div class="col-md-8">
@@ -140,7 +140,7 @@ $this->registerJs("infinity('category');", \yii\web\View::POS_END, 'my-options')
                                 <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                     <a <?php if ($ads[21]->url){ ?>href="<?= $ads[21]->url ?>"<?php } ?> class="ads-custom"
                                        target="_blank">
-                                        <img src="<?= $ai ?>">
+                                        <img src="<?= HOST. $ai ?>">
                                     </a>
                                 </div>
                             <?php } ?>
@@ -171,7 +171,7 @@ $this->registerJs("infinity('category');", \yii\web\View::POS_END, 'my-options')
                             <div class="item out-id" data-news-id="<?= $n->id ?>">
                                 <div class="">
                                     <a href="/tin-tuc/<?= $n->slug ?>">
-                                        <img src="<?= ($n->logo) ? $n->logo : '/frontend/img/news-item.jpg'; ?>">
+                                        <img src="<?= HOST. ($n->logo) ? $n->logo : '/frontend/img/news-item.jpg'; ?>">
                                     </a>
                                 </div>
                                 <a href="/tin-tuc/<?= $n->slug ?>">
@@ -210,7 +210,7 @@ $this->registerJs("infinity('category');", \yii\web\View::POS_END, 'my-options')
                                                 <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                                     <a <?php if ($a->url){ ?>href="<?= $a->url ?>"<?php } ?> class="ads"
                                                        target="_blank">
-                                                        <img src="<?= $ai ?>">
+                                                        <img src="<?= HOST. $ai ?>">
                                                     </a>
                                                 </div>
                                             <?php } ?>
@@ -242,7 +242,7 @@ $this->registerJs("infinity('category');", \yii\web\View::POS_END, 'my-options')
                     <div class="news-item">
                         <div class="col-md-4">
                             <a href="/tin-tuc/<?=$n->slug ?>">
-                                <img src="<?=$n->logo ?>" alt="...">
+                                <img src="<?= HOST.$n->logo ?>" alt="...">
                             </a>
                         </div>
                         <div class="col-md-8">
@@ -271,7 +271,7 @@ $this->registerJs("infinity('category');", \yii\web\View::POS_END, 'my-options')
                         <strong class="text-gradiant"> Tin mới nhất</strong>
                     </h3>
                     <a href="/tin-tuc/<?= $lastestNews[0]->slug ?>" class="first" title="<?= strip_tags($lastestNews[0]->title) ?>">
-                        <img src="<?= ($lastestNews[0]->logo) ? $lastestNews[0]->logo : '/frontend/img/news-item.jpg'; ?>"
+                        <img src="<?= ($lastestNews[0]->logo) ? HOST. $lastestNews[0]->logo : HOST. '/frontend/img/news-item.jpg'; ?>"
                              alt="<?= strip_tags($lastestNews[0]->title) ?>">
                         <strong>
                             <?= strip_tags($lastestNews[0]->title) . Functions::getNewsIcon($lastestNews[0]->type) ?>
@@ -298,7 +298,7 @@ $this->registerJs("infinity('category');", \yii\web\View::POS_END, 'my-options')
                         <strong class="text-gradiant"> Nóng trong tuần</strong>
                     </h3>
                     <a href="/tin-tuc/<?= $weeklyNews[0]->slug ?>" class="first" title="<?= strip_tags($weeklyNews[0]->title) ?>">
-                        <img src="<?= ($weeklyNews[0]->logo) ? $weeklyNews[0]->logo : '/frontend/img/news-item.jpg'; ?>"
+                        <img src="<?= HOST. ($weeklyNews[0]->logo) ? $weeklyNews[0]->logo : '/frontend/img/news-item.jpg'; ?>"
                              alt="<?= strip_tags($weeklyNews[0]->title) ?>">
                         <strong>
                             <!--                                <i class="fa fa-circle" aria-hidden="true"></i>-->
@@ -332,7 +332,7 @@ $this->registerJs("infinity('category');", \yii\web\View::POS_END, 'my-options')
                         <div class="news-item">
                             <div class="col-md-4">
                                 <a href="/tin-tuc/<?=$n->slug ?>">
-                                    <img src="<?=$n->logo ?>" alt="...">
+                                    <img src="<?= HOST.$n->logo ?>" alt="...">
                                 </a>
                             </div>
                             <div class="col-md-8">

@@ -157,7 +157,7 @@ MobileAsset::register($this);
             color: <?php echo MAIN_COLOR;?>;
         }
         .news-detail-info .news-detail-author {
-            color: #ed2e7d;
+            color: #1CB4CB;
         }
         .news-detail-time {
             font-size: 12px;
@@ -167,7 +167,7 @@ MobileAsset::register($this);
     </style>
 </head>
 <body>
-<script type="application/javascript" src="http://adnetwork.adasiaholdings.com/ac?out=js&nwid=2060&siteid=220538&pgname=vn_hoahoctro.vn_outstream&fmtid=44269&tgt=[sas_target]&visit=m&tmstp=[timestamp]&clcturl=[countgo]"></script>
+<script type="application/javascript" src="http://adnetwork.adasiaholdings.com/ac?out=js&nwid=2060&siteid=220538&pgname=vn_thieunien.abc_outstream&fmtid=44269&tgt=[sas_target]&visit=m&tmstp=[timestamp]&clcturl=[countgo]"></script>
 <?php $this->beginBody() ?>
 <header>
     <div id="fb-root"></div>
@@ -267,7 +267,7 @@ MobileAsset::register($this);
             <p>Cơ quan chủ quản: Trung ương Đoàn Thanh Niên Cộng sản Hồ Chí Minh<br>
                 Số giấy phép: 165/GP-BTTTT, cấp ngày 16/08/2011<br>
                 Tổng biên tập: Nguyễn Huy Lộc. Tòa soạn: Ô D29 Phạm Văn Bạch, Quận Cầu Giấy, Hà Nội<br>
-                Điện thoại: (04) 62 735 735 (168) - Email: banbientap@hoahoctro.vn<br>
+                Điện thoại: (04) 62 735 735 (168) - Email: banbientap@thieunien.abc<br>
 				Liên Hệ Quảng Cáo<br>
 				Email: quangcao@thieunien.vn<br>
 				Hotline :024 62 811 008<br>
@@ -309,7 +309,7 @@ MobileAsset::register($this);
     .btn-app {
         position: fixed;
         bottom: 30px;
-        background-color: #ed2e7d;
+        background-color: #1CB4CB;
         border: solid 1px #fff;
         color: #fff;
         font-weight: bold;

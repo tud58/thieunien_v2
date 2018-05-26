@@ -39,7 +39,7 @@ AppAsset::register($this);
 	<meta name="twitter:title" content="H2T - Hoa Hoc Tro Magazine" />
 	<meta name="twitter:creator" content="@hoahoctro_vn" />
 	<meta property="og:description" content="<?= isset($this->params['meta_description'])?$this->params['meta_description']:'Tờ báo dành cho thế hệ học trò mới'?>" />
-	<meta property="og:image" content="<?= isset($this->params['meta_image'])?$this->params['meta_image']:'http://hoahoctro.vn/frontend/img/logo-share.png'?>" />
+	<meta property="og:image" content="<?= isset($this->params['meta_image'])?$this->params['meta_image']:'http://thieunien.abc/frontend/img/logo-share.png'?>" />
 	<meta property="fb:pages" content="935497643253702" />
 	<meta name="eclick_verify" content="dFBVX1YXLRcYGVlEagsDCAsEJhceBk0dKw=="/>
     <?php $this->head() ?>
@@ -365,7 +365,7 @@ AppAsset::register($this);
     <div class="footer-info">
         <div class="container">
             <div class="logo-footer">
-                <img src="<?=(isset($siteConfig['logo_footer'])) ? $siteConfig['logo_footer'] : '/frontend/img/logo-footer.png' ;?>">
+                <img src="<?= HOST.(isset($siteConfig['logo_footer'])) ? $siteConfig['logo_footer'] : '/frontend/img/logo-footer.png' ;?>">
                 <a href="#" class="text-uppercase footer-set-homepage">
                     <i class="fa fa-home" aria-hidden="true"></i> Cài đặt H2T online làm trang chủ
                 </a>
@@ -379,7 +379,7 @@ AppAsset::register($this);
                         <?php } else { ?>
                             Công ty MGC, .JSC C11, ngõ 88 Trung Kính, Q. Cầu giấy, HN<br>
                             Điện thoại: 0975 385 536<br>
-                            Email: quangcao@hoahoctro.vn<br>
+                            Email: quangcao@thieunien.abc<br>
                             Báo giá: <a href="http://mgc.com.vn/baogia/hoahoctro.pdf" style="background: #ffffff;border-radius: 10px;color: <?php echo MAIN_COLOR;?>;font-size: 12px" target="_blank">Xem chi tiết</a>
                         <?php } ?>
                     <?php } else { ?>
@@ -392,7 +392,7 @@ AppAsset::register($this);
                             Tổng biên tập: Nguyễn Huy Lộc<br>
                             Tòa soạn: Ô D29 Phạm Văn Bạch, Quận Cầu Giấy, Hà Nội<br>
                             Điện thoại: (04) 62 735 735 – 168<br>
-                            Email: banbientap@hoahoctro.vn
+                            Email: banbientap@thieunien.abc
                         <?php } ?>
                     <?php } ?>
                 </div>
@@ -407,7 +407,7 @@ AppAsset::register($this);
                             Tổng biên tập: Nguyễn Huy Lộc<br>
                             Tòa soạn: Ô D29 Phạm Văn Bạch, Quận Cầu Giấy, Hà Nội<br>
                             Điện thoại: (04) 62 735 735 – 168<br>
-                            Email: banbientap@hoahoctro.vn
+                            Email: banbientap@thieunien.abc
                         <?php } ?>
                     <?php } else { ?>
                         <h3 class="text-uppercase">Liên hệ quảng cáo</h3>
@@ -416,7 +416,7 @@ AppAsset::register($this);
                         <?php } else { ?>
                             Công ty MGC, .JSC C11, ngõ 88 Trung Kính, Q. Cầu giấy, HN<br>
                             Điện thoại: 0975 385 536<br>
-                            Email: quangcao@hoahoctro.vn<br>
+                            Email: quangcao@thieunien.abc<br>
                             Báo giá: <a href="http://mgc.com.vn/baogia/hoahoctro.pdf" style="background: #ffffff;border-radius: 10px;color: <?php echo MAIN_COLOR;?>;font-size: 12px" target="_blank">Xem chi tiết</a>
                         <?php } ?>
                     <?php } ?>

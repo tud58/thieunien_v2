@@ -43,7 +43,7 @@ $this->registerJs("infinity('video');", \yii\web\View::POS_END, 'my-options');
                                 <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                     <a <?php if ($ads[41]->url){ ?>href="<?= $ads[41]->url ?>"<?php } ?> class="ads"
                                        target="_blank">
-                                        <img src="<?= $ai ?>">
+                                        <img src="<?= HOST. $ai ?>">
                                     </a>
                                 </div>
                             <?php } ?>
@@ -92,7 +92,7 @@ $this->registerJs("infinity('video');", \yii\web\View::POS_END, 'my-options');
                                 <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                     <a <?php if ($ads[42]->url){ ?>href="<?= $ads[42]->url ?>"<?php } ?> class="ads"
                                        target="_blank">
-                                        <img src="<?= $ai ?>">
+                                        <img src="<?= HOST. $ai ?>">
                                     </a>
                                 </div>
                             <?php } ?>
@@ -177,7 +177,7 @@ $this->registerJs("infinity('video');", \yii\web\View::POS_END, 'my-options');
                     <?php foreach($videos as $k => $v){?>
                         <div class="news-item">
                             <a href="/clip/<?=$v->slug ?>" class="video-cover">
-                                <img src="<?=$v->logo ?>">
+                                <img src="<?= HOST.$v->logo ?>">
                             </a>
                             <a href="/clip/<?=$v->slug ?>">
                                 <h5><strong><?=$v->title ?></strong></h5>

@@ -1,9 +1,10 @@
 <?php
 
-define("MEDIA_SERVER", 'http://cdn.hoahoctro.vn');
+define("MEDIA_SERVER", 'http://cdn.thieunien.abc');
 define("SESSION_TYPE" , "file");
 define("MEMCACHE_SESSION_HOST", '127.0.0.1');
 define("MEMCACHE_SESSION_PORT", 11211);
+define("HOST", 'http://thieunien.vn/');
 
 define("SOLR_SEARCH", true);
 define("SOLR_SERVER_HOSTNAME", 'localhost');
@@ -44,5 +45,5 @@ define("ADS_TYPE_HTML", 1);
 define("ADS_SHOW_TYPE_SINGLE", 0);
 define("ADS_SHOW_TYPE_SLIDE", 1);
 
-define("MAIN_COLOR", '#ed2e7d');
-define("MAIN_COLOR2", '#ed2e7d');
+define("MAIN_COLOR", '#1CB4CB');
+define("MAIN_COLOR2", '#1CB4CB');

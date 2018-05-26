@@ -7,9 +7,9 @@
 <br/>
 	<br/>Một cách sử dụng nguồn kênh tin RSS được nhiều người ưa thích là kết hợp nội dung vào các nhật trình Web (weblogs, hay "blogs"). Blogs là những trang web mang tính các nhân và bao gồm các mẩu tin và liên kết ngắn, thường xuyên cập nhật.
 <br/>
-	<br/><b>Danh mục tin RSS mà Hoahoctro.vn cung cấp</b>
+	<br/><b>Danh mục tin RSS mà thieunien.abc cung cấp</b>
 <br/>
-	<br/>Hoahoctro.vn hiện tại cung cấp các nguồn kênh dữ liệu dưới đây theo định dạng chuẩn mới nhất RSS 2.0. Các nguồn kênh tin này là miễn phí cho việc sử dụng dưới mục đích cá nhân và phi lợi nhuận. Bạn chỉ việc copy và dán các địa chỉ URL này vào những trang web hoặc phần mềm hỗ trợ đọc tin từ RSS Feeds hoặc kéo thả biểu tượng RSS dưới đây vào các phần mềm hỗ trợ RSS là được.
+	<br/>thieunien.abc hiện tại cung cấp các nguồn kênh dữ liệu dưới đây theo định dạng chuẩn mới nhất RSS 2.0. Các nguồn kênh tin này là miễn phí cho việc sử dụng dưới mục đích cá nhân và phi lợi nhuận. Bạn chỉ việc copy và dán các địa chỉ URL này vào những trang web hoặc phần mềm hỗ trợ đọc tin từ RSS Feeds hoặc kéo thả biểu tượng RSS dưới đây vào các phần mềm hỗ trợ RSS là được.
 	</p>
 	<div class="row">
 			<div class="col-md-4">

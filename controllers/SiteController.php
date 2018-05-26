@@ -106,9 +106,10 @@ class SiteController extends BaseController
                         'type' => [0, 1, 3, 4],
                     ], 0, $c->show_home_limit);
                 }
+
                 $cache->set('news_category_home_' . $c->id, $newsCategory, 30);
             }
-//            var_dump($newsCategory); die();
+
             foreach ($newsCategory as $nc) {
                 if (empty($nc->logo))
                     $nc->logo = '/frontend/img/news-item.jpg';
@@ -257,8 +258,6 @@ class SiteController extends BaseController
             ], 0, 5, ['news.id' => SORT_DESC]);
             $cache->set('contest_news_home', $contestNews, 30);
         }
-
-//        var_dump($contestNews);die();
 
         return $this->render('index', [
             'categories' => $categories,

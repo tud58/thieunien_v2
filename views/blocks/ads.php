@@ -16,7 +16,7 @@
 							<div class="item <?= ($k == 0) ? "active" : ""; ?>">
 								<a <?php if ($ads[$keyAds]->url){ ?>href="<?= $ads[$keyAds]->url ?>"<?php } ?> class="ads"
 								   target="_blank">
-									<img src="<?= $ai ?>">
+									<img src="<?= HOST. $ai ?>">
 								</a>
 							</div>
 						<?php } ?>

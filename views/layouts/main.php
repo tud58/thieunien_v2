@@ -16,11 +16,11 @@ AppAsset::register($this);
 <html lang="<?= Yii::$app->language ?>">
 <head>
 <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+<!--<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-ND5G27C');</script>
+    })(window,document,'script','dataLayer','GTM-ND5G27C');</script>-->
 <!-- End Google Tag Manager -->
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +39,7 @@ AppAsset::register($this);
 	<meta name="twitter:title" content="H2T - Hoa Hoc Tro Magazine" />
 	<meta name="twitter:creator" content="@hoahoctro_vn" />
 	<meta property="og:description" content="<?= isset($this->params['meta_description'])?$this->params['meta_description']:'Tờ báo dành cho thế hệ học trò mới'?>" />
-	<meta property="og:image" content="<?= isset($this->params['meta_image'])?$this->params['meta_image']:'http://hoahoctro.vn/frontend/img/logo-share.png'?>" />
+	<meta property="og:image" content="<?= isset($this->params['meta_image'])?$this->params['meta_image']:'http://thieunien.abc/frontend/img/logo-share.png'?>" />
 	<meta property="fb:pages" content="935497643253702" />
 	<meta name="eclick_verify" content="dFBVX1YXLRcYGVlEagsDCAsEJhceBk0dKw=="/>
     <?php $this->head() ?>
@@ -298,12 +298,24 @@ AppAsset::register($this);
 </head>
 <body>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND5G27C"
+<!--<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-ND5G27C"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<script type="application/javascript" src="http://adnetwork.adasiaholdings.com/ac?out=js&nwid=2060&siteid=220538&pgname=vn_hoahoctro.vn_outstream&fmtid=44269&tgt=[sas_target]&visit=m&tmstp=[timestamp]&clcturl=[countgo]"></script>
+<!--<script type="application/javascript" src="http://adnetwork.adasiaholdings.com/ac?out=js&nwid=2060&siteid=220538&pgname=vn_thieunien.abc_outstream&fmtid=44269&tgt=[sas_target]&visit=m&tmstp=[timestamp]&clcturl=[countgo]"></script>-->
 <?php $this->beginBody() ?>
 <header>
+    <div class="col-top-header">
+        <div class="float-left">
+            <ul class="">
+                <li class="float-left">Chuyên trang</li>
+                <li class="float-left">Emagazine</li>
+            </ul>
+        </div>
+        <div class="float-right">
+            Hotline: 097123456
+        </div>
+    </div>
+    <hr class="line-top-header">
     <div id="fb-root"></div>
     <?php $siteConfig = $this->params['siteConfig']; ?>
     <div class="container header-block">
@@ -389,11 +401,6 @@ AppAsset::register($this);
                                 <?php }?>
                             </li>
                         <?php } ?>
-                        <!--<li>
-                            <a href="/clip">
-                                <strong>Clip - Ảnh hay</strong>
-                            </a>
-                        </li>-->
                         <?php if (count($this->params['extraMenu']) > 0){ ?>
                             <li class="dropdown pull-right menu-dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
@@ -419,7 +426,7 @@ AppAsset::register($this);
             <div class="footer-content">
                 <div class="row">
                     <div class="col-sm-2 logo-footer">
-                        <img src="<?=(isset($siteConfig['logo_footer'])) ? $siteConfig['logo_footer'] : '/frontend/img/logo-footer.png' ;?>">
+                        <img src="<?= (isset($siteConfig['logo_footer'])) ? $siteConfig['logo_footer'] : '/frontend/img/logo-footer.png' ;?>">
                     </div>
                     <div class="col-sm-5 footer-set-homepage">
                         <div class="border-box">
@@ -439,7 +446,7 @@ AppAsset::register($this);
                             </div>
                             <div style="color: #828282;padding-left: 5px">
                                 <i class="fa fa-envelope" aria-hidden="true" style="margin-right: 8px"></i>
-                                <span>Email: banbientap@hoahoctro.vn</span>
+                                <span>Email: banbientap@thieunien.abc</span>
                             </div>
                         </div>
                     </div>
@@ -455,7 +462,7 @@ AppAsset::register($this);
                                     <strong class="text-uppercase">Liên hệ quảng cáo</strong><br>
                                     <strong class="text-uppercase">Địa chỉ:</strong> Công ty MGC, .JSC C11, ngõ 88 Trung Kính, Q. Cầu giấy, HN<br>
                                     <strong class="text-uppercase">Điện thoại:</strong> 0975 385 536<br>
-                                    <strong class="text-uppercase">Email:</strong> quangcao@hoahoctro.vn<br>
+                                    <strong class="text-uppercase">Email:</strong> quangcao@thieunien.abc<br>
                                     <div style="margin-top: 3px">
                                         <strong class="text-uppercase">Báo giá:</strong> <a href="http://mgc.com.vn/baogia/hoahoctro.pdf" target="_blank"><strong class="price">Xem chi tiết</strong></a>
                                     </div>
@@ -494,7 +501,7 @@ AppAsset::register($this);
                                     <strong class="text-uppercase">Liên hệ quảng cáo</strong><br>
                                     <strong class="text-uppercase">Địa chỉ:</strong> Công ty MGC, .JSC C11, ngõ 88 Trung Kính, Q. Cầu giấy, HN<br>
                                     <strong class="text-uppercase">Điện thoại:</strong> 0975 385 536<br>
-                                    <strong class="text-uppercase">Email:</strong> quangcao@hoahoctro.vn<br>
+                                    <strong class="text-uppercase">Email:</strong> quangcao@thieunien.abc<br>
                                     <div style="margin-top: 3px">
                                         <strong class="text-uppercase">Báo giá:</strong> <a href="http://mgc.com.vn/baogia/hoahoctro.pdf" target="_blank"><strong class="price">Xem chi tiết</strong></a>
                                     </div>
@@ -552,7 +559,7 @@ AppAsset::register($this);
   </div>
 </div>
 <?php $this->endBody() ?>
-<script>
+<!--<script>
     window.fbAsyncInit = function() {
         FB.init({
             appId      : '924720127671404',
@@ -567,8 +574,8 @@ AppAsset::register($this);
         js.src = "//connect.facebook.net/en_US/sdk.js";
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
-</script>
-<script>
+</script>-->
+<!--<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -577,7 +584,7 @@ AppAsset::register($this);
   ga('create', 'UA-52373313-2', 'auto');
   ga('send', 'pageview');
 
-</script>
+</script>-->
 </body>
 </html>
 <?php $this->endPage() ?>

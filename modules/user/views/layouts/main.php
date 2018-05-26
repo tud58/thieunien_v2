@@ -26,6 +26,17 @@ AppAsset::register($this);
 
 <?php $this->beginBody() ?>
 <header>
+    <div class="line-top-header">
+        <div class="float-left">
+            <ul class="">
+                <li class="">Chuyên trang</li>
+                <li class="">Emagazine</li>
+            </ul>
+        </div>
+        <div class="float-right">
+            Hotline: 097123456
+        </div>
+    </div>
     <div id="fb-root"></div>
 
     <div class="container">
@@ -171,7 +182,7 @@ AppAsset::register($this);
                 Công ty MGC, jsc<br>
                 C11, ngõ 88 Trung Kính, Q. Cầu giấy, HN<br>
                 Điện thoại: 04 3782 4323<br>
-                Email: quangcao@hoahoctro.vn<br>
+                Email: quangcao@thieunien.abc<br>
                 Báo giá: <a href="http://mgc.com.vn/baogia/15/" style="background: #ffffff;border-radius: 10px;color: <?php echo MAIN_COLOR;?>;font-size: 12px" target="_blank">Xem chi tiết</a>
             </div>
             <div class="clearfix"></div>

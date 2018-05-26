@@ -9,7 +9,7 @@ $this->title = 'Thiếu niên';
     <div id="news-hot-event">
         <?php if ($categoryHot->cover) { ?>
             <div class="text-center">
-                <img src="<?= $categoryHot->cover ?>">
+                <img src="<?= HOST. $categoryHot->cover ?>">
             </div>
         <?php } ?>
         <div class="left-block">
@@ -23,7 +23,7 @@ $this->title = 'Thiếu niên';
                     <div class="news-first-item">
                         <?php if (isset($newsHot[0])) { ?>
                             <a href="/tin-tuc/<?= $newsHot[0]->slug ?>">
-                                <img src="<?= $newsHot[0]->logo ?>" alt="...">
+                                <img src="<?= HOST. $newsHot[0]->logo ?>" alt="...">
                             </a>
                             <div class="news-first-item-info">
                                 <h4>
@@ -46,7 +46,7 @@ $this->title = 'Thiếu niên';
                         <?php if ($k <= 2 && $k > 0) { ?>
                             <div class="news-item">
                                 <a href="/tin-tuc/<?= $n->slug ?>">
-                                    <img src="<?= $n->logo ?>">
+                                    <img src="<?= HOST. $n->logo ?>">
                                     <h5>
                                         <strong class="f-title">
                                             <?= $n->title . Functions::getNewsIcon($n->type) ?>
@@ -65,7 +65,7 @@ $this->title = 'Thiếu niên';
                         <div class="news-item">
                             <a href="/tin-tuc/<?= $n->slug ?>">
                                 <div class="col-md-4">
-                                    <img src="<?= $n->logo ?>" alt="...">
+                                    <img src="<?= HOST. $n->logo ?>" alt="...">
                                 </div>
                                 <div class="col-md-8">
                                     <span><i class="fa fa-clock-o"
@@ -122,7 +122,7 @@ $this->title = 'Thiếu niên';
                                 <?php foreach ($videosHotView as $k => $n) { ?>
                                     <li>
                                         <a href="/tin-tuc/<?= $n->slug ?>">
-                                            <img src="<?= $n->logo ?>">
+                                            <img src="<?= HOST. $n->logo ?>">
                                             <strong class="f-title">
                                                 <?= $n->title . Functions::getNewsIcon($n->type) ?>
                                             </strong>
@@ -136,7 +136,7 @@ $this->title = 'Thiếu niên';
                                 <?php foreach ($videosHot as $k => $n) { ?>
                                     <li>
                                         <a href="/tin-tuc/<?= $n->slug ?>">
-                                            <img src="<?= $n->logo ?>">
+                                            <img src="<?= HOST. $n->logo ?>">
                                             <strong class="f-title">
                                                 <?= $n->title . Functions::getNewsIcon($n->type) ?>
                                             </strong>
@@ -150,7 +150,7 @@ $this->title = 'Thiếu niên';
                                 <?php foreach ($videosHotComment as $k => $n) { ?>
                                     <li>
                                         <a href="/tin-tuc/<?= $n->slug ?>">
-                                            <img src="<?= $n->logo ?>">
+                                            <img src="<?= HOST. $n->logo ?>">
                                             <strong class="f-title">
                                                 <?= $n->title . Functions::getNewsIcon($n->type) ?>
                                             </strong>
@@ -179,7 +179,7 @@ $this->title = 'Thiếu niên';
                                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                             <a <?php if ($ads[2]->url){ ?>href="<?= $ads[2]->url ?>"<?php } ?>
                                                target="_blank">
-                                                <img src="<?= $ai ?>">
+                                                <img src="<?= HOST. $ai ?>">
                                             </a>
                                         </div>
                                     <?php } ?>
@@ -220,7 +220,7 @@ $this->title = 'Thiếu niên';
                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                             <a <?php if ($ads[1]->url){ ?>href="<?= $ads[1]->url ?>"<?php } ?> class="ads-custom"
                                target="_blank">
-                                <img src="<?= $ai ?>">
+                                <img src="<?= HOST. $ai ?>">
                             </a>
                         </div>
                     <?php } ?>
@@ -282,7 +282,7 @@ $this->title = 'Thiếu niên';
                                     <div class="item <?php if ($k == 0) echo 'active'; ?>">
                                         <div class="slider-img">
                                             <a href="/tin-tuc/<?= $n->slug ?>">
-                                                <div style="background-image: url(<?= $n->logo ?>)">
+                                                <div style="background-image: url('<?= HOST.$n->logo ?>')">
                                                 </div>
                                             </a>
                                         </div>
@@ -308,7 +308,7 @@ $this->title = 'Thiếu niên';
                                     <div class="item <?php if ($k == 0) echo 'active'; ?>">
                                         <div class="slider-img">
                                             <a href="/tin-tuc/<?= $n->slug ?>">
-                                                <div style="background-image: url(<?= $n->logo ?>)">
+                                                <div style="background-image: url('<?= $n->logo ?>')">
                                                 </div>
                                             </a>
                                         </div>
@@ -333,7 +333,7 @@ $this->title = 'Thiếu niên';
                                 <div class="item active">
                                     <div class="slider-img">
                                         <a href="/tin-tuc/<?= $lefts[0]->news[0]->slug ?>">
-                                            <img src="<?= $lefts[0]->news[0]->logo ?>" alt="...">
+                                            <img src="<?= HOST. $lefts[0]->news[0]->logo ?>" alt="...">
                                         </a>
                                     </div>
                                     <div class="carousel-caption">
@@ -359,7 +359,7 @@ $this->title = 'Thiếu niên';
                 <?php if (count($lefts[0]->news) >= 7) { ?>
                     <div class="news-item">
                         <a href="/tin-tuc/<?= $lefts[0]->news[5]->slug ?>">
-                            <img src="<?= $lefts[0]->news[5]->logo ?>">
+                            <img src="<?= HOST. $lefts[0]->news[5]->logo ?>">
                             <h5>
                                 <strong class="f-title">
                                     <?= $lefts[0]->news[5]->title . Functions::getNewsIcon($lefts[0]->news[5]->type) ?>
@@ -369,7 +369,7 @@ $this->title = 'Thiếu niên';
                     </div>
                     <div class="news-item">
                         <a href="/tin-tuc/<?= $lefts[0]->news[6]->slug ?>">
-                            <img src="<?= $lefts[0]->news[6]->logo ?>">
+                            <img src="<?= HOST. $lefts[0]->news[6]->logo ?>">
                             <h5>
                                 <strong class="f-title">
                                     <?= $lefts[0]->news[6]->title . Functions::getNewsIcon($lefts[0]->news[6]->type) ?>
@@ -382,7 +382,7 @@ $this->title = 'Thiếu niên';
                         <?php if ($k >= (count($lefts[0]->news) - 2)) { ?>
                             <div class="news-item">
                                 <a href="/tin-tuc/<?= $n->slug ?>">
-                                    <img src="<?= $n->logo ?>">
+                                    <img src="<?= HOST. $n->logo ?>">
                                     <h5>
                                         <strong class="f-title">
                                             <?= $n->title . Functions::getNewsIcon($n->type) ?>
@@ -396,7 +396,7 @@ $this->title = 'Thiếu niên';
                     <?php if (isset($lefts[0]->news[1])) { ?>
                         <div class="news-item">
                             <a href="/tin-tuc/<?= $lefts[0]->news[1]->slug ?>">
-                                <img src="<?= $lefts[0]->news[1]->logo ?>">
+                                <img src="<?= HOST. $lefts[0]->news[1]->logo ?>">
                                 <h5>
                                     <strong class="f-title">
                                         <?= $lefts[0]->news[1]->title . Functions::getNewsIcon($lefts[0]->news[1]->type) ?>
@@ -408,7 +408,7 @@ $this->title = 'Thiếu niên';
                     <?php if (isset($lefts[0]->news[2])) { ?>
                         <div class="news-item">
                             <a href="/tin-tuc/<?= $lefts[0]->news[2]->slug ?>">
-                                <img src="<?= $lefts[0]->news[2]->logo ?>">
+                                <img src="<?= HOST. $lefts[0]->news[2]->logo ?>">
                                 <h5>
                                     <strong class="f-title">
                                         <?= $lefts[0]->news[2]->title . Functions::getNewsIcon($lefts[0]->news[2]->type) ?>
@@ -434,7 +434,7 @@ $this->title = 'Thiếu niên';
                         <div class="item">
                             <div class="">
                                 <a href="/tin-tuc/<?= $n->slug ?>">
-                                    <img src="<?= ($n->logo) ? $n->logo : '/frontend/img/news-item.jpg'; ?>">
+                                    <img src="<?= HOST. ($n->logo) ? $n->logo : '/frontend/img/news-item.jpg'; ?>">
                                 </a>
                             </div>
                             <a href="/tin-tuc/<?= $n->slug ?>">
@@ -469,7 +469,7 @@ $this->title = 'Thiếu niên';
                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                             <a <?php if ($ads[3]->url){ ?>href="<?= $ads[2]->url ?>"<?php } ?> class="ads-right-1"
                                target="_blank">
-                                <img src="<?= $ai ?>">
+                                <img src="<?= HOST. $ai ?>">
                             </a>
                         </div>
                     <?php } ?>
@@ -507,7 +507,7 @@ $this->title = 'Thiếu niên';
                 <?php if (isset($lefts[1]->news[0])) { ?>
                     <div class="news-first-item">
                         <a href="/tin-tuc/<?= $lefts[1]->news[0]->slug ?>">
-                            <img src="<?= $lefts[1]->news[0]->logo ?>" alt="...">
+                            <img src="<?= HOST. $lefts[1]->news[0]->logo ?>" alt="...">
                         </a>
 
                         <div class="news-first-item-info">
@@ -530,7 +530,7 @@ $this->title = 'Thiếu niên';
                 <?php if (isset($lefts[1]['news'][1])) { ?>
                     <div class="news-item">
                         <a href="/tin-tuc/<?= $lefts[1]->news[1]->slug ?>">
-                            <img src="<?= $lefts[1]->news[1]->logo ?>" alt="...">
+                            <img src="<?= HOST. $lefts[1]->news[1]->logo ?>" alt="...">
                             <h5>
                                 <strong class="f-title">
                                     <?= $lefts[1]->news[1]->title . Functions::getNewsIcon($lefts[1]->news[1]->type) ?>
@@ -542,7 +542,7 @@ $this->title = 'Thiếu niên';
                 <?php if (isset($lefts[1]['news'][2])) { ?>
                     <div class="news-item">
                         <a href="/tin-tuc/<?= $lefts[1]->news[2]->slug ?>">
-                            <img src="<?= $lefts[1]->news[2]->logo ?>" alt="...">
+                            <img src="<?= HOST. $lefts[1]->news[2]->logo ?>" alt="...">
                             <h5>
                                 <strong class="f-title">
                                     <?= $lefts[1]->news[2]->title . Functions::getNewsIcon($lefts[1]->news[2]->type) ?>
@@ -561,7 +561,7 @@ $this->title = 'Thiếu niên';
                         <div class="item">
                             <div class="">
                                 <a href="/tin-tuc/<?= $n->slug ?>">
-                                    <img src="<?= $n->logo ?>">
+                                    <img src="<?= HOST. $n->logo ?>">
                                 </a>
                             </div>
                             <a href="/tin-tuc/<?= $n->slug ?>">
@@ -600,7 +600,7 @@ $this->title = 'Thiếu niên';
                 <?php if (isset($lefts[2]->news[0])) { ?>
                     <div class="news-first-item">
                         <a href="/tin-tuc/<?= $lefts[2]->news[0]->slug ?>">
-                            <img src="<?= $lefts[2]->news[0]->logo ?>" alt="...">
+                            <img src="<?= HOST. $lefts[2]->news[0]->logo ?>" alt="...">
                         </a>
 
                         <div class="news-first-item-info">
@@ -623,7 +623,7 @@ $this->title = 'Thiếu niên';
                 <?php if (isset($lefts[2]['news'][1])) { ?>
                     <div class="news-item">
                         <a href="/tin-tuc/<?= $lefts[2]->news[1]->slug ?>">
-                            <img src="<?= $lefts[2]->news[1]->logo ?>" alt="...">
+                            <img src="<?= HOST. $lefts[2]->news[1]->logo ?>" alt="...">
                             <h5>
                                 <strong class="f-title">
                                     <?= $lefts[2]->news[1]->title . Functions::getNewsIcon($lefts[2]->news[1]->type) ?>
@@ -635,7 +635,7 @@ $this->title = 'Thiếu niên';
                 <?php if (isset($lefts[2]['news'][2])) { ?>
                     <div class="news-item">
                         <a href="/tin-tuc/<?= $lefts[2]->news[2]->slug ?>">
-                            <img src="<?= $lefts[2]->news[2]->logo ?>" alt="...">
+                            <img src="<?= HOST. $lefts[2]->news[2]->logo ?>" alt="...">
                             <h5>
                                 <strong class="f-title">
                                     <?= $lefts[2]->news[2]->title . Functions::getNewsIcon($lefts[2]->news[2]->type) ?>
@@ -653,7 +653,7 @@ $this->title = 'Thiếu niên';
                         <div class="item">
                             <div class="">
                                 <a href="/tin-tuc/<?= $n->slug ?>">
-                                    <img src="<?= $n->logo ?>">
+                                    <img src="<?= HOST. $n->logo ?>">
                                 </a>
                             </div>
                             <a href="/tin-tuc/<?= $n->slug ?>">
@@ -692,7 +692,7 @@ $this->title = 'Thiếu niên';
                 <?php if (isset($lefts[3]->news[0])) { ?>
                     <div class="news-first-item">
                         <a href="/tin-tuc/<?= $lefts[3]->news[0]->slug ?>">
-                            <img src="<?= $lefts[3]->news[0]->logo ?>" alt="...">
+                            <img src="<?= HOST. $lefts[3]->news[0]->logo ?>" alt="...">
                         </a>
 
                         <div class="news-first-item-info">
@@ -715,7 +715,7 @@ $this->title = 'Thiếu niên';
                 <?php if (isset($lefts[3]['news'][1])) { ?>
                     <div class="news-item">
                         <a href="/tin-tuc/<?= $lefts[3]->news[1]->slug ?>">
-                            <img src="<?= $lefts[3]->news[1]->logo ?>" alt="...">
+                            <img src="<?= HOST. $lefts[3]->news[1]->logo ?>" alt="...">
                             <h5>
                                 <strong class="f-title">
                                     <?= $lefts[3]->news[1]->title . Functions::getNewsIcon($lefts[3]->news[1]->type) ?>
@@ -727,7 +727,7 @@ $this->title = 'Thiếu niên';
                 <?php if (isset($lefts[3]['news'][2])) { ?>
                     <div class="news-item">
                         <a href="/tin-tuc/<?= $lefts[3]->news[2]->slug ?>">
-                            <img src="<?= $lefts[3]->news[2]->logo ?>" alt="...">
+                            <img src="<?= HOST. $lefts[3]->news[2]->logo ?>" alt="...">
                             <h5>
                                 <strong class="f-title">
                                     <?= $lefts[3]->news[2]->title . Functions::getNewsIcon($lefts[2]->news[2]->type) ?>
@@ -745,7 +745,7 @@ $this->title = 'Thiếu niên';
                         <div class="item">
                             <div class="">
                                 <a href="/tin-tuc/<?= $n->slug ?>">
-                                    <img src="<?= $n->logo ?>">
+                                    <img src="<?= HOST. $n->logo ?>">
                                 </a>
                             </div>
                             <a href="/tin-tuc/<?= $n->slug ?>">
@@ -786,7 +786,7 @@ $this->title = 'Thiếu niên';
                         <div class="news-item">
                             <div class="embed-responsive embed-responsive-4by3">
                                 <a href="/tin-tuc/<?= $n->slug ?>">
-                                    <img src="<?= $n->logo ?>">
+                                    <img src="<?= HOST. $n->logo ?>">
                                 </a>
                             </div>
                             <a href="/tin-tuc/<?= $n->slug ?>">
@@ -824,7 +824,7 @@ $this->title = 'Thiếu niên';
                 <?php if (isset($lefts[5]->news[0])) { ?>
                     <div class="news-first-item">
                         <a href="/tin-tuc/<?= $lefts[5]->news[0]->slug ?>">
-                            <img src="<?= $lefts[5]->news[0]->logo ?>" alt="...">
+                            <img src="<?= HOST. $lefts[5]->news[0]->logo ?>" alt="...">
                         </a>
 
                         <div class="news-first-item-info">
@@ -847,7 +847,7 @@ $this->title = 'Thiếu niên';
                 <?php if (isset($lefts[5]['news'][1])) { ?>
                     <div class="news-item">
                         <a href="/tin-tuc/<?= $lefts[5]->news[1]->slug ?>">
-                            <img src="<?= $lefts[5]->news[1]->logo ?>" alt="...">
+                            <img src="<?= HOST. $lefts[5]->news[1]->logo ?>" alt="...">
                             <h5>
                                 <strong class="f-title">
                                     <?= $lefts[5]->news[1]->title . Functions::getNewsIcon($lefts[5]->news[1]->type) ?>
@@ -859,7 +859,7 @@ $this->title = 'Thiếu niên';
                 <?php if (isset($lefts[5]['news'][2])) { ?>
                     <div class="news-item">
                         <a href="/tin-tuc/<?= $lefts[5]->news[2]->slug ?>">
-                            <img src="<?= $lefts[5]->news[2]->logo ?>" alt="...">
+                            <img src="<?= HOST. $lefts[5]->news[2]->logo ?>" alt="...">
                             <h5>
                                 <strong class="f-title">
                                     <?= $lefts[5]->news[2]->title . Functions::getNewsIcon($lefts[5]->news[2]->type) ?>
@@ -877,7 +877,7 @@ $this->title = 'Thiếu niên';
                         <div class="item">
                             <div class="">
                                 <a href="/tin-tuc/<?= $n->slug ?>">
-                                    <img src="<?= $n->logo ?>">
+                                    <img src="<?= HOST. $n->logo ?>">
                                 </a>
                             </div>
                             <a href="/tin-tuc/<?= $n->slug ?>">
@@ -915,7 +915,7 @@ $this->title = 'Thiếu niên';
                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                             <a <?php if ($ads[2]->url){ ?>href="<?= $ads[2]->url ?>"<?php } ?>
                                target="_blank">
-                                <img src="<?= $ai ?>">
+                                <img src="<?= HOST. $ai ?>">
                             </a>
                         </div>
                     <?php } ?>
@@ -944,7 +944,7 @@ $this->title = 'Thiếu niên';
             <?php foreach ($lastestNews as $k => $n) { ?>
                 <li>
                     <a href="/tin-tuc/<?= $n->slug ?>">
-                        <img src="<?= $n->logo ?>">
+                        <img src="<?= HOST. $n->logo ?>">
                         <strong class="f-title">
                             <?= $n->title . Functions::getNewsIcon($n->type) ?>
                         </strong>
@@ -971,7 +971,7 @@ $this->title = 'Thiếu niên';
                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                             <a <?php if ($ads[4]->url){ ?>href="<?= $ads[4]->url ?>"<?php } ?>
                                target="_blank">
-                                <img src="<?= $ai ?>">
+                                <img src="<?= HOST. $ai ?>">
                             </a>
                         </div>
                     <?php } ?>
@@ -1001,7 +1001,7 @@ $this->title = 'Thiếu niên';
                 <?php if ($k < 4) { ?>
                     <li>
                         <a href="/tin-tuc/<?= $n->slug ?>">
-                            <img src="<?= $n->logo ?>">
+                            <img src="<?= HOST. $n->logo ?>">
                             <strong class="f-title">
                                 <?= $n->title . Functions::getNewsIcon($n->type) ?>
                             </strong>
@@ -1029,7 +1029,7 @@ $this->title = 'Thiếu niên';
                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                             <a <?php if ($ads[5]->url){ ?>href="<?= $ads[5]->url ?>"<?php } ?>
                                target="_blank">
-                                <img src="<?= $ai ?>">
+                                <img src="<?= HOST. $ai ?>">
                             </a>
                         </div>
                     <?php } ?>
@@ -1059,7 +1059,7 @@ $this->title = 'Thiếu niên';
                 <?php if ($k <= 4) { ?>
                     <li>
                         <a href="/tin-tuc/<?= $n->slug ?>">
-                            <img src="<?= $n->logo ?>">
+                            <img src="<?= HOST. $n->logo ?>">
                             <strong class="f-title">
                                 <?= $n->title . Functions::getNewsIcon($n->type) ?>
                             </strong>
@@ -1087,7 +1087,7 @@ $this->title = 'Thiếu niên';
                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                             <a <?php if ($ads[6]->url){ ?>href="<?= $ads[6]->url ?>"<?php } ?>
                                target="_blank">
-                                <img src="<?= $ai ?>">
+                                <img src="<?= HOST. $ai ?>">
                             </a>
                         </div>
                     <?php } ?>
@@ -1117,7 +1117,7 @@ $this->title = 'Thiếu niên';
                 <?php if ($k < 4) { ?>
                     <li>
                         <a href="/tin-tuc/<?= $n->slug ?>">
-                            <img src="<?= $n->logo ?>">
+                            <img src="<?= HOST. $n->logo ?>">
                             <strong class="f-title">
                                 <?= $n->title . Functions::getNewsIcon($n->type) ?>
                             </strong>
@@ -1145,7 +1145,7 @@ $this->title = 'Thiếu niên';
                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                             <a <?php if ($ads[7]->url){ ?>href="<?= $ads[7]->url ?>"<?php } ?>
                                target="_blank">
-                                <img src="<?= $ai ?>">
+                                <img src="<?= HOST. $ai ?>">
                             </a>
                         </div>
                     <?php } ?>
@@ -1182,7 +1182,7 @@ $this->title = 'Thiếu niên';
                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                             <a <?php if ($ads[8]->url){ ?>href="<?= $ads[8]->url ?>"<?php } ?> class="ads-custom"
                                target="_blank">
-                                <img src="<?= $ai ?>">
+                                <img src="<?= HOST. $ai ?>">
                             </a>
                         </div>
                     <?php } ?>
@@ -1212,7 +1212,7 @@ $this->title = 'Thiếu niên';
                     </a>
                 </h3>
                 <a href="/tin-tuc/<?= $lefts[6]->news[0]->slug ?>" class="firt-news-item">
-                    <img src="<?= $lefts[6]->news[0]->logo ?>">
+                    <img src="<?= HOST. $lefts[6]->news[0]->logo ?>">
                     <strong class="f-title">
                         <?= $lefts[6]->news[0]->title . Functions::getNewsIcon($lefts[6]->news[0]->type) ?>
                     </strong>
@@ -1243,7 +1243,7 @@ $this->title = 'Thiếu niên';
                     </a>
                 </h3>
                 <a href="/tin-tuc/<?= $lefts[7]->news[0]->slug ?>" class="firt-news-item">
-                    <img src="<?= $lefts[7]->news[0]->logo ?>">
+                    <img src="<?= HOST. $lefts[7]->news[0]->logo ?>">
                     <strong class="f-title">
                         <?= $lefts[7]->news[0]->title . Functions::getNewsIcon($lefts[7]->news[0]->type) ?>
                     </strong>
@@ -1274,7 +1274,7 @@ $this->title = 'Thiếu niên';
                     </a>
                 </h3>
                 <a href="/tin-tuc/<?= $lefts[8]->news[0]->slug ?>" class="firt-news-item">
-                    <img src="<?= $lefts[8]->news[0]->logo ?>">
+                    <img src="<?= HOST. $lefts[8]->news[0]->logo ?>">
                     <strong class="f-title">
                         <?= $lefts[8]->news[0]->title . Functions::getNewsIcon($lefts[8]->news[0]->type) ?>
                     </strong>
@@ -1319,7 +1319,7 @@ $this->title = 'Thiếu niên';
                         <div class="col-sm-4">
                             <div class="news-item">
                                 <a href="/tin-tuc/<?= $n->slug ?>">
-                                    <img src="<?= $n->logo ?>">
+                                    <img src="<?= HOST. $n->logo ?>">
                                     <h4>
                                         <strong class="f-title">
                                             <?= $n->title . Functions::getNewsIcon($n->type) ?>
@@ -1347,7 +1347,7 @@ $this->title = 'Thiếu niên';
 
                 <div class="news-item">
                     <a href="/tin-tuc/<?= $rights[2]->news[0]->slug ?>">
-                        <img src="<?= $rights[2]->news[0]->logo ?>">
+                        <img src="<?= HOST. $rights[2]->news[0]->logo ?>">
                         <h4>
                             <strong class="f-title">
                                 <?= $rights[2]->news[0]->title . Functions::getNewsIcon($rights[2]->news[0]->type) ?>
@@ -1372,7 +1372,7 @@ $this->title = 'Thiếu niên';
                     <div class="col-sm-4">
                         <div class="video-icon video-block">
                             <a href="/tin-tuc/<?= $n->slug ?>">
-                                <img src="<?= ($n->logo) ? $n->logo : '/frontend/img/news-item.jpg'; ?>">
+                                <img src="<?= HOST. ($n->logo) ? $n->logo : '/frontend/img/news-item.jpg'; ?>">
                             </a>
                         </div>
                         <a href="/tin-tuc/<?= $n->slug ?>">
@@ -1390,7 +1390,7 @@ $this->title = 'Thiếu niên';
                     <div class="video-slide-item">
                         <div class="video-icon">
                             <a href="/tin-tuc/<?= $n->slug ?>">
-                                <img src="<?= ($n['logo']) ? $n['logo'] : '/frontend/img/news-item.jpg'; ?>">
+                                <img src="<?= HOST. ($n['logo']) ? $n['logo'] : '/frontend/img/news-item.jpg'; ?>">
                             </a>
                         </div>
                         <a href="/tin-tuc/<?= $n->slug ?>">
@@ -1424,7 +1424,7 @@ $this->title = 'Thiếu niên';
                                 <div class="news-item">
                                     <div class="">
                                         <a href="/tin-tuc/<?= $n->slug ?>">
-                                            <img src="<?= $n->logo ?>">
+                                            <img src="<?= HOST. $n->logo ?>">
                                         </a>
                                     </div>
                                     <a href="/tin-tuc/<?= $n->slug ?>">
@@ -1457,7 +1457,7 @@ $this->title = 'Thiếu niên';
     </div>
     <div class="col-sm-5">
         <div class="fb-page"
-             data-href="https://www.facebook.com/hoahoctro.vn/"
+             data-href="https://www.facebook.com/thieunien.abc/"
              data-tabs="timeline"
              data-small-header="true"
              data-adapt-container-width="true"
@@ -1465,8 +1465,8 @@ $this->title = 'Thiếu niên';
              data-height="350"
              data-width="500"
              data-show-facepile="true">
-            <blockquote cite="https://www.facebook.com/hoahoctro.vn/" class="fb-xfbml-parse-ignore">
-                <a href="https://www.facebook.com/hoahoctro.vn/">Hoa học trò</a>
+            <blockquote cite="https://www.facebook.com/thieunien.abc/" class="fb-xfbml-parse-ignore">
+                <a href="https://www.facebook.com/thieunien.abc/">Hoa học trò</a>
             </blockquote>
         </div>
     </div>
@@ -1488,7 +1488,7 @@ $this->title = 'Thiếu niên';
                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                             <a <?php if ($ads[9]->url){ ?>href="<?= $ads[9]->url ?>"<?php } ?> class="ads-custom"
                                target="_blank">
-                                <img src="<?= $ai ?>">
+                                <img src="<?= HOST. $ai ?>">
                             </a>
                         </div>
                     <?php } ?>

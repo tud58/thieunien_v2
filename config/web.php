@@ -36,14 +36,14 @@ $config = [
 			'identityCookie' => [
 				'name' => '_identity',
 				'path' => '/',
-				'domain' => ".hoahoctro.vn",
+				'domain' => ".thieunien.abc",
 			],		
         ],
 		'session' => [
 			// ...
 			'cookieParams' => [
 				'path' => '/',
-				'domain' => ".hoahoctro.vn",
+				'domain' => ".thieunien.abc",
 			],
 		],	
         'errorHandler' => [

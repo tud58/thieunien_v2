@@ -23,7 +23,7 @@ $this->registerJs("infinity('search');", \yii\web\View::POS_END, 'my-options');
                         <div class="news-item">
                             <div class="embed-responsive embed-responsive-16by9">
                                 <a href="/tin-tuc/<?=$n->slug ?>">
-                                    <img src="<?=$n->logo ?>" alt="...">
+                                    <img src="<?= HOST.$n->logo ?>" alt="...">
                                 </a>
                             </div>
                             <a href="/tin-tuc/<?=$n->slug ?>">
@@ -59,7 +59,7 @@ $this->registerJs("infinity('search');", \yii\web\View::POS_END, 'my-options');
                                 <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                     <a <?php if ($ads[21]->url){ ?>href="<?= $ads[21]->url ?>"<?php } ?> class="ads-custom"
                                        target="_blank">
-                                        <img src="<?= $ai ?>">
+                                        <img src="<?= HOST. $ai ?>">
                                     </a>
                                 </div>
                             <?php } ?>
@@ -98,7 +98,7 @@ $this->registerJs("infinity('search');", \yii\web\View::POS_END, 'my-options');
                                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                             <a <?php if ($a->url){ ?>href="<?= $a->url ?>"<?php } ?> class="ads"
                                                target="_blank">
-                                                <img src="<?= $ai ?>">
+                                                <img src="<?= HOST. $ai ?>">
                                             </a>
                                         </div>
                                     <?php } ?>

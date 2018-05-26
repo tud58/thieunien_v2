@@ -56,7 +56,7 @@ $this->registerJs("
                             <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                 <a <?php if ($ads[41]->url){ ?>href="<?= $ads[41]->url ?>"<?php } ?> class="ads"
                                    target="_blank">
-                                    <img src="<?= $ai ?>">
+                                    <img src="<?= HOST. $ai ?>">
                                 </a>
                             </div>
                         <?php } ?>
@@ -140,7 +140,7 @@ $this->registerJs("
                             <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                 <a <?php if ($ads[42]->url){ ?>href="<?= $ads[42]->url ?>"<?php } ?> class="ads"
                                    target="_blank">
-                                    <img src="<?= $ai ?>">
+                                    <img src="<?= HOST. $ai ?>">
                                 </a>
                             </div>
                         <?php } ?>
@@ -227,7 +227,7 @@ $this->registerJs("
                 <div class="item">
                     <div class="embed-responsive embed-responsive-16by9">
                         <a href="/tin-tuc/<?= $n->slug ?>">
-                            <img src="<?= ($n->logo) ? $n->logo : '/frontend/img/news-item.jpg'; ?>">
+                            <img src="<?= ($n->logo) ? HOST. $n->logo : '/frontend/img/news-item.jpg'; ?>">
                         </a>
                     </div>
                     <a href="/tin-tuc/<?= $n->slug ?>">
@@ -299,7 +299,7 @@ $this->registerJs("
                                     <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                         <a <?php if ($a->url){ ?>href="<?= $a->url ?>"<?php } ?> class="ads"
                                            target="_blank">
-                                            <img src="<?= $ai ?>">
+                                            <img src="<?= HOST. $ai ?>">
                                         </a>
                                     </div>
                                 <?php } ?>
@@ -333,7 +333,7 @@ $this->registerJs("
                     <div class="col-sm-4">
                         <div class="embed-responsive embed-responsive-16by9 video-icon">
                             <a href="/video/<?= $v->slug ?>">
-                                <img src="<?= $v->logo ?>">
+                                <img src="<?= HOST. $v->logo ?>">
                             </a>
                         </div>
                         <a href="/video/<?= $v->slug ?>">
@@ -351,7 +351,7 @@ $this->registerJs("
                     <div class="video-slide-item">
                         <div class="embed-responsive embed-responsive-16by9 video-icon">
                             <a href="/video/<?= $v->slug ?>">
-                                <img src="<?= $v->logo ?>">
+                                <img src="<?= HOST. $v->logo ?>">
                             </a>
                         </div>
                         <a href="/video/<?= $v->slug ?>">

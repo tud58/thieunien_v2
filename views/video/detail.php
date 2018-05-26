@@ -62,7 +62,7 @@ $this->registerJs("infinity('video');", \yii\web\View::POS_END, 'my-options');
                                     <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                         <a <?php if ($ads[41]->url){ ?>href="<?= $ads[41]->url ?>"<?php } ?> class="ads"
                                            target="_blank">
-                                            <img src="<?= $ai ?>">
+                                            <img src="<?= HOST. $ai ?>">
                                         </a>
                                     </div>
                                 <?php } ?>
@@ -147,7 +147,7 @@ $this->registerJs("infinity('video');", \yii\web\View::POS_END, 'my-options');
                         <div class="news-item">
                             <div class="embed-responsive embed-responsive-16by9 video-icon">
                                 <a href="/clip/<?=$v->slug ?>">
-                                    <img src="<?=$v->logo ?>">
+                                    <img src="<?= HOST.$v->logo ?>">
                                 </a>
                             </div>
                             <a href="/clip/<?=$v->slug ?>">
@@ -187,7 +187,7 @@ $this->registerJs("infinity('video');", \yii\web\View::POS_END, 'my-options');
                                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                             <a <?php if ($a->url){ ?>href="<?= $a->url ?>"<?php } ?> class="ads"
                                                target="_blank">
-                                                <img src="<?= $ai ?>">
+                                                <img src="<?= HOST. $ai ?>">
                                             </a>
                                         </div>
                                     <?php } ?>

@@ -53,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                         <a <?php if ($ads[41]->url){ ?>href="<?= $ads[41]->url ?>"<?php } ?> class="ads"
                                            target="_blank">
-                                            <img src="<?= $ai ?>">
+                                            <img src="<?= HOST. $ai ?>">
                                         </a>
                                     </div>
                                 <?php } ?>
@@ -129,7 +129,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         <div class="news-item">
                             <div class="col-md-4">
                                 <a href="/su-kien/<?=$event->id; ?>/<?=$n->slug ?>">
-                                    <img src="<?=$n->logo ?>" alt="...">
+                                    <img src="<?= HOST.$n->logo ?>" alt="...">
                                 </a>
                             </div>
                             <div class="col-md-8">
@@ -176,7 +176,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                             <a <?php if ($a->url){ ?>href="<?= $a->url ?>"<?php } ?> class="ads"
                                                target="_blank">
-                                                <img src="<?= $ai ?>">
+                                                <img src="<?= HOST. $ai ?>">
                                             </a>
                                         </div>
                                     <?php } ?>

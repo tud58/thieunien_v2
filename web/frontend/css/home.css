@@ -3,7 +3,7 @@
     left: 0;
 	font-weight: bold;
 	font-size: 23px;
-    color:#ed2e7d;
+    color:#1CB4CB;
 }
 
 #carousel-home .carousel-caption{
@@ -75,6 +75,7 @@
     width: 65%;
     padding-right: 6px;
     float: left;
+    max-height: 115px;
 }
 .right-news-list li strong{
     width: calc(35% - 5px);
@@ -107,4 +108,45 @@
 
 .video-block {
     margin: 0px 10px 10px 0px;
+}
+
+main .left-block .news-ex-item .news-item img {
+    max-height: 155px;
+}
+
+.owl-carousel .owl-item img {
+    max-height: 115px;
+}
+
+.news-first-item img {
+    max-height: 385px;
+}
+
+.col-top-header {
+    color: #1CB4CB;
+    display: inline-block;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.col-top-header ul li {
+    margin-left: 85px;
+}
+
+.col-top-header .float-right {
+    margin-right: 85px;
+}
+
+hr.line-top-header {
+    border-top: 2px solid #1CB4CB;
+    margin-top: 0;
+    margin-bottom: 10px;
 }

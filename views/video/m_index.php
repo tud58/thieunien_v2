@@ -37,7 +37,7 @@ $this->registerJs("infinity('video');", \yii\web\View::POS_END, 'my-options');
                             <input type="hidden" id="is_next" value="<?=$is_next ?>">
                             <div class="news-item">
                                 <a href="/clip/<?=$n->slug ?>" class="video-cover">
-                                    <img src="<?=$n->logo ?>">
+                                    <img src="<?= HOST.$n->logo ?>">
                                 </a>
                                 <a href="/clip/<?=$n->slug ?>">
                                     <h5><strong><?=$n->title ?></strong></h5>

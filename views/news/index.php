@@ -69,7 +69,7 @@ $this->registerJs("
 </div>
 <div id="news-cover">
     <?php if ($news->cover) { ?>
-        <img src="<?= $news->cover ?>" alt="<?= $news->title ?>"/>
+        <img src="<?= HOST. $news->cover ?>" alt="<?= $news->title ?>"/>
     <?php } ?>
 </div>
 <div class="container container-detail <?php if (Functions::isIpad()) echo "ipad"; ?>"
@@ -112,7 +112,7 @@ $this->registerJs("
                             <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                 <a <?php if ($ads[41]->url){ ?>href="<?= $ads[41]->url ?>"<?php } ?> class="ads"
                                    target="_blank">
-                                    <img src="<?= $ai ?>">
+                                    <img src="<?= HOST. $ai ?>">
                                 </a>
                             </div>
                         <?php } ?>
@@ -198,7 +198,7 @@ $this->registerJs("
                             <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                 <a <?php if ($ads[42]->url){ ?>href="<?= $ads[42]->url ?>"<?php } ?> class="ads"
                                    target="_blank">
-                                    <img src="<?= $ai ?>">
+                                    <img src="<?= HOST. $ai ?>">
                                 </a>
                             </div>
                         <?php } ?>
@@ -236,7 +236,7 @@ $this->registerJs("
                     <div class="item">
                         <div class="">
                             <a href="/tin-tuc/<?= $n->slug ?>">
-                                <img src="<?= ($n->logo) ? $n->logo : '/frontend/img/news-item.jpg'; ?>">
+                                <img src="<?= ($n->logo) ? HOST. $n->logo : '/frontend/img/news-item.jpg'; ?>">
                             </a>
                         </div>
                         <a href="/tin-tuc/<?= $n->slug ?>">
@@ -259,7 +259,7 @@ $this->registerJs("
                 <strong class="text-gradiant"> Tin mới nhất</strong>
             </h3>
             <a href="/tin-tuc/<?= $lastestNews[0]->slug ?>" class="first" title="<?= strip_tags($lastestNews[0]->title) ?>">
-                <img src="<?= ($lastestNews[0]->logo) ? $lastestNews[0]->logo : '/frontend/img/news-item.jpg'; ?>"
+                <img src="<?= ($lastestNews[0]->logo) ? HOST. $lastestNews[0]->logo : HOST. '/frontend/img/news-item.jpg'; ?>"
                      alt="<?= strip_tags($lastestNews[0]->title) ?>">
                 <strong>
                     <?= strip_tags($lastestNews[0]->title) . Functions::getNewsIcon($lastestNews[0]->type) ?>
@@ -286,7 +286,7 @@ $this->registerJs("
                 <strong class="text-gradiant"> Nóng trong tuần</strong>
             </h3>
             <a href="/tin-tuc/<?= $weeklyNews[0]->slug ?>" class="first" title="<?= strip_tags($weeklyNews[0]->title) ?>">
-                <img src="<?= ($weeklyNews[0]->logo) ? $weeklyNews[0]->logo : '/frontend/img/news-item.jpg'; ?>"
+                <img src="<?= ($weeklyNews[0]->logo) ? HOST. $weeklyNews[0]->logo : '/frontend/img/news-item.jpg'; ?>"
                      alt="<?= strip_tags($weeklyNews[0]->title) ?>">
                 <strong>
                     <!--                                <i class="fa fa-circle" aria-hidden="true"></i>-->
@@ -332,7 +332,7 @@ $this->registerJs("
                                             <div class="item <?= ($k == 0) ? "active" : ""; ?>">
                                                 <a <?php if ($a->url){ ?>href="<?= $a->url ?>"<?php } ?> class="ads"
                                                    target="_blank">
-                                                    <img src="<?= $ai ?>">
+                                                    <img src="<?= HOST. $ai ?>">
                                                 </a>
                                             </div>
                                         <?php } ?>

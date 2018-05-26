@@ -1,5 +1,5 @@
 <?php
-if($_SERVER['HTTP_HOST']  == 'ad.hoahoctro.vn' && $_SERVER['REQUEST_URI'] == '/'){
+if($_SERVER['HTTP_HOST']  == 'ad.thieunien.abc' && $_SERVER['REQUEST_URI'] == '/'){
 	header('Location: /admin');
 }
 // comment out the following two lines when deployed to production

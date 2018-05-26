@@ -16,7 +16,7 @@ $this->registerJs("infinity('event');", \yii\web\View::POS_END, 'my-options');
                     <?php if ($kn == 0){ ?>
                         <div class="news-item first">
                             <a href="/tin-tuc/<?=$n->slug ?>">
-                                <img src="<?=$n->logo ?>">
+                                <img src="<?= HOST.$n->logo ?>">
                             </a>
                             <h4><strong><?=$n->title ?></strong></h4>
                             <div class="des">
@@ -30,7 +30,7 @@ $this->registerJs("infinity('event');", \yii\web\View::POS_END, 'my-options');
                             <input type="hidden" id="event_id" value="<?=$event->id ?>">
                             <div class="news-item">
                                 <a href="/tin-tuc/<?=$n->slug ?>">
-                                    <img src="<?=$n->logo ?>">
+                                    <img src="<?= HOST.$n->logo ?>">
                                     <h5><strong><?=$n->title ?></strong></h5>
                                 </a>
                             </div>

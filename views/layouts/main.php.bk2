@@ -32,7 +32,7 @@ AppAsset::register($this);
 	<meta name="twitter:title" content="H2T - Hoa Hoc Tro Magazine" />
 	<meta name="twitter:creator" content="@hoahoctro_vn" />
 	<meta property="og:description" content="<?= isset($this->params['meta_description'])?$this->params['meta_description']:'Tờ báo dành cho thế hệ học trò mới'?>" />
-	<meta property="og:image" content="<?= isset($this->params['meta_image'])?$this->params['meta_image']:'http://hoahoctro.vn/frontend/img/logo-share.png'?>" />
+	<meta property="og:image" content="<?= isset($this->params['meta_image'])?$this->params['meta_image']:'http://thieunien.abc/frontend/img/logo-share.png'?>" />
 
     <?php $this->head() ?>
     <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -364,13 +364,13 @@ AppAsset::register($this);
                 Tổng biên tập: Nguyễn Huy Lộc<br>
                 Tòa soạn: Ô D29 Phạm Văn Bạch, Quận Cầu Giấy, Hà Nội<br>
                 Điện thoại: (04) 62 735 735 – 168<br>
-                Email: banbientap@hoahoctro.vn
+                Email: banbientap@thieunien.abc
             </div>
             <div class="col-sm-6">
                 <h3 class="text-uppercase">Liên hệ quảng cáo</h3>
                 Công ty MGC, .JSC C11, ngõ 88 Trung Kính, Q. Cầu giấy, HN<br>
                 Điện thoại: 0975 385 536<br>
-                Email: quangcao@hoahoctro.vn<br>
+                Email: quangcao@thieunien.abc<br>
                 Báo giá: <a href="http://mgc.com.vn/baogia/hoahoctro.pdf" style="background: #ffffff;border-radius: 10px;color: <?php echo MAIN_COLOR;?>;font-size: 12px" target="_blank">Xem chi tiết</a>
             </div>
             <div class="clearfix"></div>
