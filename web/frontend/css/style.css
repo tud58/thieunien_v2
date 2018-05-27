@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Averta';
+    font-family: 'Arimo';
     src: url('../fonts/Averta.woff');
 }
 
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    font-family: 'Averta Bold';
+    font-family: 'Arimo Bold';
     src: url('../fonts/Averta Bold.woff');
 }
 
@@ -18,7 +18,7 @@ main .container-detail {
 }
 
 body {
-    font-family: Averta;
+    font-family: Arimo;
     font-size: 14px;
     color: #222;
 }
@@ -46,7 +46,7 @@ a:hover, a:focus {
 }
 
 strong {
-    font-family: "Averta Bold";
+    font-family: "Arimo Bold";
 }
 
 .center-justified {
@@ -122,17 +122,17 @@ h3 strong.text-gradiant {
 }
 
 .owl-prev, .owl-next {
-    width: 35px;
-    height: 100px;
-    top: 5px;
+    width: 25px;
+    height: 80px;
+    top: 3px;
     position: absolute;
     color: #fff;
     text-align: center;
     background: #1CB4CB;
-    padding: 40px 5px;
+    padding: 30px 5px;
 }
 .owl-prev i, .owl-next i {
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .owl-prev {
@@ -442,7 +442,7 @@ header #bs-example-navbar-collapse-1 .dropdown-menu {
 }
 
 .carousel-caption .f-description {
-    height: 88px;
+    /*height: 88px;*/
     overflow: hidden;
 }
 
@@ -478,9 +478,9 @@ header #bs-example-navbar-collapse-1 .dropdown-menu {
 }
 
 .carousel-caption h4 {
-    height: 52px;
+    /*height: 52px;*/
     overflow: hidden;
-    margin-bottom: 2px;
+    margin-bottom: 10px;
 }
 
 hr {
@@ -563,8 +563,9 @@ div.padding-left-5 {
 }
 
 .news-item h5 {
-    height: 53px;
+    /*height: 53px;*/
     overflow: hidden;
+    margin-bottom: 20px;
 }
 
 .owl-controls .owl-dots {
@@ -620,7 +621,7 @@ div.padding-left-5 {
 }
 
 .news-first-item h4 {
-    height: 46px;
+    /*height: 46px;*/
     overflow: hidden;
 }
 

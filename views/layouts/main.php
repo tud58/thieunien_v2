@@ -304,18 +304,20 @@ AppAsset::register($this);
 <!--<script type="application/javascript" src="http://adnetwork.adasiaholdings.com/ac?out=js&nwid=2060&siteid=220538&pgname=vn_thieunien.abc_outstream&fmtid=44269&tgt=[sas_target]&visit=m&tmstp=[timestamp]&clcturl=[countgo]"></script>-->
 <?php $this->beginBody() ?>
 <header>
-    <div class="col-top-header">
-        <div class="float-left">
-            <ul class="">
-                <li class="float-left">Chuyên trang</li>
-                <li class="float-left">Emagazine</li>
-            </ul>
+    <div class="fixed-header">
+        <div class="col-top-header">
+            <div class="float-left">
+                <ul class="">
+                    <li class="float-left">Chuyên trang</li>
+                    <li class="float-left">Emagazine</li>
+                </ul>
+            </div>
+            <div class="float-right">
+                Hotline: 097123456
+            </div>
         </div>
-        <div class="float-right">
-            Hotline: 097123456
-        </div>
+        <hr class="line-top-header">
     </div>
-    <hr class="line-top-header">
     <div id="fb-root"></div>
     <?php $siteConfig = $this->params['siteConfig']; ?>
     <div class="container header-block">

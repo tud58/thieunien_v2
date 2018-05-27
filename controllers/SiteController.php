@@ -54,6 +54,7 @@ class SiteController extends BaseController
 
     public function actionIndex()
     {
+//        echo '1: '. date('Y/m/d H:i:s', time()) . '</br>';
         $cache = Yii::$app->cache;
         //dunghq - 180317 - cache category home
         $categories = false;
@@ -63,6 +64,7 @@ class SiteController extends BaseController
 
             $cache->set('categories_home', $categories, 30);
         }
+//        echo '2: '. date('Y/m/d H:i:s', time()) . '</br>';
 
         $categoryIds = [];
         foreach ($categories as $c) {
@@ -70,6 +72,7 @@ class SiteController extends BaseController
         }
 
         foreach ($categories as $c) {
+//            echo '2.0 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
             $c->news = [];
 
             $newsCategory = $cache->get('news_category_home_' . $c->id);
@@ -77,19 +80,21 @@ class SiteController extends BaseController
             if ($newsCategory === false) {
                 $categoryIdsChild = array();
                 //dunghq 0707 lay ca trong dm con
-//                $categoryChilds = $cache->get('category_child_'.$c->id);
-//                if ($categoryChilds === false) {
-//                    $categoryChilds = Category::find()
-//                                    ->where(['status' => [STATUS_ACTIVE],'parent_id' => $c->id])
-//                                    ->orderBy(['number_order' => SORT_ASC])
-//                                    ->all();
-//                    $cache->set('category_child_'.$c->id, $categoryChilds, 30);
-//                }
-//
-//                $categoryIdsChild[] = $c->id;
-//                foreach ($categoryChilds as $cc) {
-//                    $categoryIdsChild[] = $cc->id;
-//                }
+                $categoryChilds = $cache->get('category_child_'.$c->id);
+                if ($categoryChilds === false) {
+                    $categoryChilds = Category::find()
+                                    ->where(['status' => [STATUS_ACTIVE],'parent_id' => $c->id])
+                                    ->orderBy(['number_order' => SORT_ASC])
+                                    ->all();
+                    $cache->set('category_child_'.$c->id, $categoryChilds, 30);
+                }
+
+                $categoryIdsChild[] = $c->id;
+                foreach ($categoryChilds as $cc) {
+                    $categoryIdsChild[] = $cc->id;
+                }
+
+//                echo '2.0.1 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
 
                 if ($c->id == 25 || $c->id == 17) {
                     $newsCategory = NewsCategory::search([
@@ -99,23 +104,31 @@ class SiteController extends BaseController
                         'type' => [0, 1, 3, 4],
                     ], 0, $c->show_home_limit);
                 } else {
+//                    echo '2.0.1.0 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
                     $newsCategory = News::searchIndex([
                         'category_id' => $c->id,
                         'status' => NEWS_STATUS_PUBLISHED,
                         'show_home' => 1,
                         'type' => [0, 1, 3, 4],
                     ], 0, $c->show_home_limit);
+//                    echo '2.0.1.1 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
                 }
+
+//                echo '2.0.2 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
 
                 $cache->set('news_category_home_' . $c->id, $newsCategory, 30);
             }
+
+//            echo '2.1 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
 
             foreach ($newsCategory as $nc) {
                 if (empty($nc->logo))
                     $nc->logo = '/frontend/img/news-item.jpg';
                 $c->news[] = $nc;
             }
+//            echo '2.2 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
         }
+//        echo '3: '. date('Y/m/d H:i:s', time()) . '</br>';
 
         $lefts = array();
         $rights = array();
@@ -174,6 +187,7 @@ class SiteController extends BaseController
                 if ($n->logo == "")
                     $n->logo = "/frontend/img/news-item.jpg";
         }
+//        echo '4: '. date('Y/m/d H:i:s', time()) . '</br>';
 
         if (isset($rights[0]) && $rights[0]->news) {
             $rights[0]->order_read = $rights[0]->news;
@@ -218,6 +232,7 @@ class SiteController extends BaseController
             }
             $cache->set('ads_home', $ads, 30);
         }
+//        echo '5: '. date('Y/m/d H:i:s', time()) . '</br>';
 
         $adsWithKey = array();
         foreach ($ads as $a) {
@@ -258,6 +273,9 @@ class SiteController extends BaseController
             ], 0, 5, ['news.id' => SORT_DESC]);
             $cache->set('contest_news_home', $contestNews, 30);
         }
+//        echo '6: '. date('Y/m/d H:i:s', time()) . '</br>';
+
+//        die();
 
         return $this->render('index', [
             'categories' => $categories,

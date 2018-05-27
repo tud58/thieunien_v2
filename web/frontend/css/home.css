@@ -150,3 +150,138 @@ hr.line-top-header {
     margin-top: 0;
     margin-bottom: 10px;
 }
+
+.container .left-block #focus-day {
+    margin-top: 5px;
+}
+
+#focus-day .news-item.col-sm-4 img {
+    max-height: 165px;
+}
+
+.box-right-left-block {
+    background-color: #f5f5f5;
+    border: 1px solid #d5d5d5;
+    padding: 10px;
+}
+
+.box-right-left-block hr {
+    color: #d5d5d5;
+}
+
+.line-left-title {
+    width: 5%;
+    border-bottom: 3px solid #1CB4CB;
+    margin-bottom: 15px;
+    margin-right: 10px;
+}
+
+.line-right-title {
+    width: 73%;
+    border-bottom: 3px solid #1CB4CB;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+.fixed-header {
+    /*overflow: hidden;
+    position: fixed;
+    width: 100%;*/
+}
+
+#group-news-0-1 .news-item.col-sm-6 img {
+    max-height: 160px;
+}
+
+#group-news-0-1 .col-sm-6 {
+    padding-left: 0;
+}
+
+#group-news-0-1 .news-item-info {
+    margin-bottom: 15px;
+}
+
+#group-news-0-1 .glyphicon {
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    color: #1CB4CB;
+}
+
+#group-news-0-1 .col-sm-4 .news-item {
+    margin-bottom: 25px;
+}
+
+#group-news-0-2 .glyphicon {
+    display: inline;
+    float: left;
+    margin-right: 10px;
+    color: #1CB4CB;
+}
+
+#group-news-0-2 .col-sm-4 .news-item {
+    margin-bottom: 25px;
+}
+
+#group-news-0-2 .news-item.col-sm-6 img {
+    max-height: 145px;
+}
+
+#group-news-0-2 .col-sm-6 {
+    padding-left: 0;
+}
+
+#group-news-slide-2 .item img {
+    max-height: 85px;
+}
+
+#group-news-0-2 .col-sm-8 .row {
+    margin-left: 0;
+}
+
+#group-news-0-2 .slide-news {
+    margin-right: 0;
+}
+
+#group-news-0-2 .owl-item {
+    width: 33%;
+}
+
+#group-news-0-3 {
+    margin-top: 25px;
+}
+
+#group-news-0-3 img {
+    max-height: 160px;
+}
+
+.category-parent strong {
+    font-size: 23px;
+    color: #1CB4CB;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#group-news-0-4 .col-sm-4 img {
+    max-height: 200px;
+}
+
+#group-news-0-5 img {
+    max-height: 145px;
+}
+
+#group-news-0-6 img {
+    max-height: 145px;
+}
+
+#group-news-0-7 .col-sm-4 .news-item img {
+    max-height: 225px;
+}
+
+#group-news-0-7 hr {
+    color: #1CB4CB;
+}
+
+#group-news-0-7 {
+    margin-bottom: 20px;
+}
