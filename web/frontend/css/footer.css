@@ -1,5 +1,6 @@
 footer {
     padding-bottom: 30px;
+    margin-top: 10px;
 }
 
 footer .footer-info .footer-set-homepage i {
@@ -31,7 +32,7 @@ footer .comment-user {
 .border-box {
     height: 60px;
     padding-top: 18px;
-    border-left: 2px solid #e9ebee;
+    /*border-left: 2px solid #e9ebee;*/
     padding-left: 15px;
     margin-left: -15px;
 }
@@ -61,10 +62,6 @@ footer .bdr {
     border-right: 2px solid #e9ebee;
 }
 
-footer .bdl {
-    border-left: 2px solid #e9ebee;
-}
-
 footer .note.bdr {
     margin-right: -18px;
 }
@@ -77,4 +74,10 @@ footer .note.bdl {
 footer .block-content {
     padding-top: 15px;
     margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+footer .footer-info .container {
+    padding-left: 0;
+    padding-right: 0;
 }

@@ -75,7 +75,7 @@
     width: 65%;
     padding-right: 6px;
     float: left;
-    max-height: 115px;
+    max-height: 95px;
 }
 .right-news-list li strong{
     width: calc(35% - 5px);
@@ -90,7 +90,7 @@
 }
 #focus-week .tabs-header li{
     float: left;
-    font-family: "Averta Bold";
+    font-family: "Arimo Bold";
     margin: 0px 10px;
 }
 #focus-week .tabs-header li a{
@@ -111,11 +111,11 @@
 }
 
 main .left-block .news-ex-item .news-item img {
-    max-height: 155px;
+    height: 160px;
 }
 
 .owl-carousel .owl-item img {
-    max-height: 115px;
+    height: 120px;
 }
 
 .news-first-item img {
@@ -138,7 +138,7 @@ main .left-block .news-ex-item .news-item img {
 }
 
 .col-top-header ul li {
-    margin-left: 85px;
+    margin-left: 70px;
 }
 
 .col-top-header .float-right {
@@ -166,7 +166,7 @@ hr.line-top-header {
 }
 
 .box-right-left-block hr {
-    color: #d5d5d5;
+    border-color: #d5d5d5;
 }
 
 .line-left-title {
@@ -180,7 +180,7 @@ hr.line-top-header {
     width: 73%;
     border-bottom: 3px solid #1CB4CB;
     margin-bottom: 15px;
-    margin-left: 10px;
+    margin-left: 15px;
 }
 
 .fixed-header {
@@ -190,11 +190,12 @@ hr.line-top-header {
 }
 
 #group-news-0-1 .news-item.col-sm-6 img {
-    max-height: 160px;
+    height: 160px;
 }
 
 #group-news-0-1 .col-sm-6 {
     padding-left: 0;
+    min-height: 225px;
 }
 
 #group-news-0-1 .news-item-info {
@@ -252,7 +253,7 @@ hr.line-top-header {
 }
 
 #group-news-0-3 img {
-    max-height: 160px;
+    height: 160px;
 }
 
 .category-parent strong {
@@ -267,11 +268,11 @@ hr.line-top-header {
 }
 
 #group-news-0-5 img {
-    max-height: 145px;
+    height: 160px;
 }
 
 #group-news-0-6 img {
-    max-height: 145px;
+    height: 160px;
 }
 
 #group-news-0-7 .col-sm-4 .news-item img {
@@ -279,9 +280,23 @@ hr.line-top-header {
 }
 
 #group-news-0-7 hr {
-    color: #1CB4CB;
+    border-color: #1CB4CB;
 }
 
 #group-news-0-7 {
     margin-bottom: 20px;
+}
+
+header nav .container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+li.dropdown.main-menu {
+    margin-left: 35px;
+    font-size: 15px;
+}
+
+p.f-title {
+    font-size: 17px;
 }

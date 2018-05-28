@@ -54,8 +54,8 @@ AppAsset::register($this);
         .footer-content {
             border-top: 15px solid <?php echo MAIN_COLOR;?>;
             padding-top: 10px;
-            padding-left: 32px;
-            padding-right: 36px;
+            padding-left: 0;
+            padding-right: 0;
         }
 
 
@@ -328,33 +328,6 @@ AppAsset::register($this);
                 <?php foreach($this->params['tags'] as $t){?>
                     <li><a class="border-gradiant-round border-radius-12" href="<?=($t->slug) ? '/tag/'.$t->slug : '#'; ?>">#<?=Functions::renameTag($t->name); ?><span class="text-gradiant">#<?=Functions::renameTag($t->name); ?></php></span></a></li>
                 <?php } ?>
-                <li>
-                    <ul class="list-unstyled user-social <?=(isset($siteConfig['user_position'])) ? $siteConfig['user_position'] : '' ;?>">
-                        <li>
-                            <form action="/tim-kiem" method="get" id="formSearchHead">
-                                <input type="text" placeholder="Nhập nội dung cần tìm kiếm..." id="input-search-head" name="keyword" value="<?=$this->params['keyword'] ?>" >
-                            </form>
-                            <a href="#" onclick="$('#formSearchHead input').toggle()">
-                                <i class="fa fa-search" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <?php if (!Yii::$app->user->getIsGuest()){ ?>
-                            <li style="margin-top: -5px">
-                                <button class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    <img src="/uploads/user_avatar/<?=Yii::$app->user->id?>.png" class="avatar_img"> <strong><?php echo Yii::$app->user->identity->profile->full_name;?></strong> <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="/thong-tin-ca-nhan">Trang cá nhân</a></li>
-                                    <li><a data-method="post" href="/user/logout">Thoát</a></li>
-                                </ul>
-                            </li>
-                        <?php } else { ?>
-                            <li><a href="/dang-nhap"><i class="fa fa-user" aria-hidden="true"></i> Đăng nhập</a></li>
-                            <li><a href="/user/auth/login?authclient=facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                            <li><a href="/user/auth/login?authclient=google"><i class="fa fa-google" aria-hidden="true"></i></a></li>
-                        <?php } ?>
-                    </ul>
-                </li>
             <?php } ?>
         </ul>
         <div class="clearfix"></div>
@@ -374,8 +347,8 @@ AppAsset::register($this);
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav text-uppercase text-center">
-                    <li>
-                        <a href="/">
+                    <li style="margin-left: 0; ">
+                        <a href="/" style="padding-left: 0; ">
                             <i class="fa fa-home" aria-hidden="true"></i>
                         </a>
                     </li>
@@ -383,10 +356,6 @@ AppAsset::register($this);
                         <?php foreach($this->params['headerMenu'] as $k => $c){?>
                             <li class="dropdown main-menu">
                                 <a href="/danh-muc/<?=$c['slug'] ?>" >
-                                    <?php if ($k != 0) { ?>
-                                        <i class="fa fa-circle" aria-hidden="true"></i>
-                                    <?php } ?>
-<!--                                    <strong>--><?//=Functions::replace_second_space($c['name']) ?><!--</strong>-->
                                     <strong><?=$c['name']?></strong>
                                 </a>
                                 <?php if($c['child']) {?>
@@ -394,7 +363,6 @@ AppAsset::register($this);
                                     <?php foreach($c['child'] as $key => $value){ ?>
                                         <li>
                                             <a href="/danh-muc/<?=$c['slug'] ?>/<?=$value['slug'] ?>">
-                                                <i class="fa fa-circle" aria-hidden="true"></i>
                                                 <?=$value['name'] ?>
                                             </a>
                                         </li>
@@ -414,6 +382,14 @@ AppAsset::register($this);
                             </li>
                         <?php } ?>
                     <?php } ?>
+                    <li style="margin-left: 40px; ">
+                        <form action="/tim-kiem" method="get" id="formSearchHead">
+                            <input type="text" placeholder="Nhập nội dung cần tìm kiếm..." id="input-search-head" name="keyword" value="<?=$this->params['keyword'] ?>" >
+                        </form>
+                        <a href="#" onclick="$('#formSearchHead input').toggle()">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -426,19 +402,14 @@ AppAsset::register($this);
     <div class="footer-info">
         <div class="container">
             <div class="footer-content">
-                <div class="row">
-                    <div class="col-sm-2 logo-footer">
+                <div class="row" style="margin-left: 0; margin-right: 0; ">
+                    <div class="col-sm-4 logo-footer">
                         <img src="<?= (isset($siteConfig['logo_footer'])) ? $siteConfig['logo_footer'] : '/frontend/img/logo-footer.png' ;?>">
                     </div>
-                    <div class="col-sm-5 footer-set-homepage">
-                        <div class="border-box">
-                            <a href="#" class="text-uppercase">
-                                <i class="fa fa-home" aria-hidden="true"></i>
-                                <strong>Cài đặt H2T online làm trang chủ</strong>
-                            </a>
-                        </div>
+                    <div class="col-sm-4 footer-set-homepage">
+
                     </div>
-                    <div class="col-sm-5 comment-user">
+                    <div class="col-sm-4 comment-user">
                         <div class="border-box">
                             <i class="fa fa-commenting" aria-hidden="true" style="color: <?php echo MAIN_COLOR;?>;font-size: 22px;transform: scaleX(-1);margin-right: 5px"></i>
                             <strong class="text-uppercase">Phản hồi của độc giả</strong>
@@ -456,88 +427,27 @@ AppAsset::register($this);
                 <hr style="border-width: 2px"/>
                 <div class="clearfix c-a-c">
                     <div class="row">
-                        <?php if (isset($siteConfig['info_ads_position']) && $siteConfig['info_ads_position'] == 'a-c'){ ?>
-                            <div class="col-sm-4 bdr block-content">
-                                <?php if (isset($siteConfig['ads_content'])){ ?>
-                                    <?= $siteConfig['ads_content'] ?>
-                                <?php } else { ?>
-                                    <strong class="text-uppercase">Liên hệ quảng cáo</strong><br>
-                                    <strong class="text-uppercase">Địa chỉ:</strong> Công ty MGC, .JSC C11, ngõ 88 Trung Kính, Q. Cầu giấy, HN<br>
-                                    <strong class="text-uppercase">Điện thoại:</strong> 0975 385 536<br>
-                                    <strong class="text-uppercase">Email:</strong> quangcao@thieunien.abc<br>
-                                    <div style="margin-top: 3px">
-                                        <strong class="text-uppercase">Báo giá:</strong> <a href="http://mgc.com.vn/baogia/hoahoctro.pdf" target="_blank"><strong class="price">Xem chi tiết</strong></a>
-                                    </div>
-                                <?php } ?>
+                        <div class="col-sm-8 bdr block-content">
+                            <strong class="text-uppercase">Cơ quan chủ quản:</strong> Trung ương Đoàn Thanh Niên Cộng sản Hồ Chí Minh<br>
+                            <strong class="text-uppercase">Số giấy phép:</strong> 165/GP-BTTTT, cấp ngày 16/08/2011<br>
+                            <strong class="text-uppercase">Tổng biên tập:</strong> Nguyễn Huy Lộc<br>
+                            <strong class="text-uppercase">Tòa soạn:</strong> Ô D29 Phạm Văn Bạch, Quận Cầu Giấy, Hà Nội<br>
+                            <strong class="text-uppercase">Điện thoại:</strong> (04) 62 735 735 – 168
+                            <div class="note" style="margin-top: 20px; ">
+                                ® Ghi rõ nguồn "Thiếu Niên" khi bạn phát hành lại thông tin từ website này.<br>
+                                Các trang ngoài sẽ được mở ra ở cửa sổ mới. Thiếu Niên không chịu trách nhiệm nội dung các trang ngoài.<br>
+                                Công ty MGC độc quyền khai thác thương mại quảng cáo trên trang web này.
                             </div>
-                        <?php } else { ?>
-                            <div class="col-sm-8 block-content">
-                                <?php if (isset($siteConfig['info_content'])){ ?>
-                                    <?= $siteConfig['info_content'] ?>
-                                <?php } else { ?>
-                                    <strong class="text-uppercase">Cơ quan chủ quản:</strong> Trung ương Đoàn Thanh Niên Cộng sản Hồ Chí Minh<br>
-                                    <strong class="text-uppercase">Số giấy phép:</strong> 165/GP-BTTTT, cấp ngày 16/08/2011<br>
-                                    <strong class="text-uppercase">Tổng biên tập:</strong> Nguyễn Huy Lộc<br>
-                                    <strong class="text-uppercase">Tòa soạn:</strong> Ô D29 Phạm Văn Bạch, Quận Cầu Giấy, Hà Nội<br>
-                                    <strong class="text-uppercase">Điện thoại:</strong> (04) 62 735 735 – 168
-                                <?php } ?>
+                        </div>
+                        <div class="col-sm-4 block-content">
+                            <strong class="text-uppercase">Liên hệ quảng cáo</strong><br>
+                            <strong class="text-uppercase">Địa chỉ:</strong> Công ty MGC, .JSC C11, ngõ 88 Trung Kính, Q. Cầu giấy, HN<br>
+                            <strong class="text-uppercase">Điện thoại:</strong> 0975 385 536<br>
+                            <strong class="text-uppercase">Email:</strong> quangcao@thieunien.abc<br>
+                            <div style="margin-top: 3px">
+                                <strong class="text-uppercase">Báo giá:</strong> <a href="http://mgc.com.vn/baogia/hoahoctro.pdf" target="_blank"><strong class="price">Xem chi tiết</strong></a>
                             </div>
-                        <?php } ?>
-                        <?php if (isset($siteConfig['info_ads_position']) && $siteConfig['info_ads_position'] == 'a-c'){ ?>
-                            <div class="col-sm-8 block-content">
-                                <?php if (isset($siteConfig['info_content'])){ ?>
-                                    <?= $siteConfig['info_content'] ?>
-                                <?php } else { ?>
-                                    <strong class="text-uppercase">Cơ quan chủ quản:</strong> Trung ương Đoàn Thanh Niên Cộng sản Hồ Chí Minh<br>
-                                    <strong class="text-uppercase">Số giấy phép:</strong> 165/GP-BTTTT, cấp ngày 16/08/2011<br>
-                                    <strong class="text-uppercase">Tổng biên tập:</strong> Nguyễn Huy Lộc<br>
-                                    <strong class="text-uppercase">Tòa soạn:</strong> Ô D29 Phạm Văn Bạch, Quận Cầu Giấy, Hà Nội<br>
-                                    <strong class="text-uppercase">Điện thoại:</strong> (04) 62 735 735 – 168
-                                <?php } ?>
-                            </div>
-                        <?php } else { ?>
-                            <div class="col-sm-4 bdl block-content">
-                                <?php if (isset($siteConfig['ads_content'])){ ?>
-                                    <?= $siteConfig['ads_content'] ?>
-                                <?php } else { ?>
-                                    <strong class="text-uppercase">Liên hệ quảng cáo</strong><br>
-                                    <strong class="text-uppercase">Địa chỉ:</strong> Công ty MGC, .JSC C11, ngõ 88 Trung Kính, Q. Cầu giấy, HN<br>
-                                    <strong class="text-uppercase">Điện thoại:</strong> 0975 385 536<br>
-                                    <strong class="text-uppercase">Email:</strong> quangcao@thieunien.abc<br>
-                                    <div style="margin-top: 3px">
-                                        <strong class="text-uppercase">Báo giá:</strong> <a href="http://mgc.com.vn/baogia/hoahoctro.pdf" target="_blank"><strong class="price">Xem chi tiết</strong></a>
-                                    </div>
-                                <?php } ?>
-                            </div>
-                        <?php } ?>
-                    </div>
-                    <div class="row">
-                        <?php if (isset($siteConfig['info_ads_position']) && $siteConfig['info_ads_position'] == 'a-c'){ ?>
-                            <div class="col-sm-4"></div>
-                            <div class="col-sm-8">
-                                <div class="note bdl">
-                                    <?php if (isset($siteConfig['note_content'])){ ?>
-                                        <?= $siteConfig['note_content'] ?>
-                                    <?php } else { ?>
-                                        ® Ghi rõ nguồn "Hoa Học Trò" khi bạn phát hành lại thông tin từ website này.<br>
-                                        Các trang ngoài sẽ được mở ra ở cửa sổ mới. Hoa Học Trò không chịu trách nhiệm nội dung các trang ngoài.<br>
-                                        Công ty MGC độc quyền khai thác thương mại quảng cáo trên trang web này.
-                                    <?php } ?>
-                                </div>
-                            </div>
-                        <?php } else { ?>
-                            <div class="col-sm-8">
-                                <div class="note bdr">
-                                    <?php if (isset($siteConfig['note_content'])){ ?>
-                                        <?= $siteConfig['note_content'] ?>
-                                    <?php } else { ?>
-                                        ® Ghi rõ nguồn "Hoa Học Trò" khi bạn phát hành lại thông tin từ website này.<br>
-                                        Các trang ngoài sẽ được mở ra ở cửa sổ mới. Hoa Học Trò không chịu trách nhiệm nội dung các trang ngoài.<br>
-                                        Công ty MGC độc quyền khai thác thương mại quảng cáo trên trang web này.
-                                    <?php } ?>
-                                </div>
-                            </div>
-                        <?php } ?>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -561,32 +471,6 @@ AppAsset::register($this);
   </div>
 </div>
 <?php $this->endBody() ?>
-<!--<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '924720127671404',
-            xfbml      : true,
-            version    : 'v2.7'
-        });
-    };
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>-->
-<!--<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-52373313-2', 'auto');
-  ga('send', 'pageview');
-
-</script>-->
 </body>
 </html>
 <?php $this->endPage() ?>

@@ -54,7 +54,6 @@ class SiteController extends BaseController
 
     public function actionIndex()
     {
-//        echo '1: '. date('Y/m/d H:i:s', time()) . '</br>';
         $cache = Yii::$app->cache;
         //dunghq - 180317 - cache category home
         $categories = false;
@@ -64,7 +63,6 @@ class SiteController extends BaseController
 
             $cache->set('categories_home', $categories, 30);
         }
-//        echo '2: '. date('Y/m/d H:i:s', time()) . '</br>';
 
         $categoryIds = [];
         foreach ($categories as $c) {
@@ -72,20 +70,17 @@ class SiteController extends BaseController
         }
 
         foreach ($categories as $c) {
-//            echo '2.0 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
             $c->news = [];
 
             $newsCategory = $cache->get('news_category_home_' . $c->id);
-            // $newsCategory = false;
             if ($newsCategory === false) {
                 $categoryIdsChild = array();
-                //dunghq 0707 lay ca trong dm con
                 $categoryChilds = $cache->get('category_child_'.$c->id);
                 if ($categoryChilds === false) {
                     $categoryChilds = Category::find()
-                                    ->where(['status' => [STATUS_ACTIVE],'parent_id' => $c->id])
-                                    ->orderBy(['number_order' => SORT_ASC])
-                                    ->all();
+                        ->where(['status' => [STATUS_ACTIVE],'parent_id' => $c->id])
+                        ->orderBy(['number_order' => SORT_ASC])
+                        ->all();
                     $cache->set('category_child_'.$c->id, $categoryChilds, 30);
                 }
 
@@ -94,41 +89,22 @@ class SiteController extends BaseController
                     $categoryIdsChild[] = $cc->id;
                 }
 
-//                echo '2.0.1 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
-
-                if ($c->id == 25 || $c->id == 17) {
-                    $newsCategory = NewsCategory::search([
-                        'category_id' => [$c->id],
-                        'status' => NEWS_STATUS_PUBLISHED,
-                        'show_home' => 1,
-                        'type' => [0, 1, 3, 4],
-                    ], 0, $c->show_home_limit);
-                } else {
-//                    echo '2.0.1.0 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
-                    $newsCategory = News::searchIndex([
-                        'category_id' => $c->id,
-                        'status' => NEWS_STATUS_PUBLISHED,
-                        'show_home' => 1,
-                        'type' => [0, 1, 3, 4],
-                    ], 0, $c->show_home_limit);
-//                    echo '2.0.1.1 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
-                }
-
-//                echo '2.0.2 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
+                $newsCategory = News::searchIndex([
+                    'category_id' => $categoryIdsChild,
+                    'status' => NEWS_STATUS_PUBLISHED,
+                    'show_home' => 1,
+                    'type' => [0, 1, 3, 4],
+                ], 0, $c->show_home_limit);
 
                 $cache->set('news_category_home_' . $c->id, $newsCategory, 30);
             }
-
-//            echo '2.1 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
 
             foreach ($newsCategory as $nc) {
                 if (empty($nc->logo))
                     $nc->logo = '/frontend/img/news-item.jpg';
                 $c->news[] = $nc;
             }
-//            echo '2.2 '. $c->id.': '. date('Y/m/d H:i:s', time()) . '</br>';
         }
-//        echo '3: '. date('Y/m/d H:i:s', time()) . '</br>';
 
         $lefts = array();
         $rights = array();
@@ -145,78 +121,6 @@ class SiteController extends BaseController
                     $rights[] = $c;
             }
         }
-        $videosHot = array();
-        $videosHotView = array();
-        $videosHotComment = array();
-        $newsHot = array();
-        if ($categoryHot) {
-            //dunghq - 180317 - cache news category video home
-            $videosHot = $cache->get('news_category_video_home');
-            if ($videosHot === false) {
-                $videosHot = News::searchIndex([
-                    'category_id' => $categoryHot->id,
-                    'status' => NEWS_STATUS_PUBLISHED,
-                    'type' => 2,
-                ], 0, 6);
-                $cache->set('news_category_video_home', $videosHot, 30);
-            }
-
-            foreach ($videosHot as $v)
-                if ($v->logo == "")
-                    $v->logo = "/frontend/img/news-item.jpg";
-            $videosHotView = $videosHot;
-            usort($videosHotView, function ($a, $b) {
-                return $b->view_count - $a->view_count;
-            });
-            $videosHotComment = $videosHot;
-            usort($videosHotComment, function ($a, $b) {
-                return $b->comment_count - $a->comment_count;
-            });
-
-            //dunghq - 180317 - cache news category news home
-            $newsHot = $cache->get('news_category_news_home');
-            if ($newsHot === false) {
-                $newsHot = News::searchIndex([
-                    'category_id' => $categoryHot->id,
-                    'status' => NEWS_STATUS_PUBLISHED,
-                    'type' => [0, 1, 3, 4],
-                ], 0, 6);
-                $cache->set('news_category_news_home', $newsHot, 30);
-            }
-            foreach ($newsHot as $n)
-                if ($n->logo == "")
-                    $n->logo = "/frontend/img/news-item.jpg";
-        }
-//        echo '4: '. date('Y/m/d H:i:s', time()) . '</br>';
-
-        if (isset($rights[0]) && $rights[0]->news) {
-            $rights[0]->order_read = $rights[0]->news;
-            usort($rights[0]->order_read, function ($a, $b) {
-                return $b->view_count - $a->view_count;
-            });
-            $rights[0]->order_new = $rights[0]->news;
-            usort($rights[0]->order_new, function ($a, $b) {
-                return $b->publish_time - $a->publish_time;
-            });
-            $rights[0]->order_comment = $rights[0]->news;
-            usort($rights[0]->order_comment, function ($a, $b) {
-                return $b->comment_count - $a->comment_count;
-            });
-        }
-
-        //dunghq - 180317 - cache video home
-        $videos = $cache->get('news_video_home');
-        if ($videos === false) {
-            $videos = News::find()
-                ->where(['status' => NEWS_STATUS_PUBLISHED, 'show_home' => 1, 'type' => 2])
-                ->orderBy(['publish_time' => SORT_DESC])
-                ->limit(10)
-                ->all();
-            $cache->set('news_video_home', $videos, 30);
-        }
-        foreach ($videos as $v)
-            if ($v->logo == "")
-                $v->logo = "/frontend/img/news-item.jpg";
 
         //dunghq - 180317 - cache adv home
         $ads = $cache->get('ads_home');
@@ -232,7 +136,6 @@ class SiteController extends BaseController
             }
             $cache->set('ads_home', $ads, 30);
         }
-//        echo '5: '. date('Y/m/d H:i:s', time()) . '</br>';
 
         $adsWithKey = array();
         foreach ($ads as $a) {
@@ -240,17 +143,6 @@ class SiteController extends BaseController
             $a->htmls = explode('(,)', $a->html);
 
             $adsWithKey[$a->position] = $a;
-        }
-        //dunghq - 190317 - cache same news
-        $dailyNews = $cache->get('daily_news_home');
-        if ($dailyNews === false) {
-            $dailyNews = News::search([
-//                'category_id' => $categoryIds,
-                'daily' => 1,
-                'status' => NEWS_STATUS_PUBLISHED,
-                'news.type' => [0, 1, 3, 4],
-            ], 0, 10, ['news.id' => SORT_DESC]);
-            $cache->set('daily_news_home', $dailyNews, 30);
         }
 
         //lastest
@@ -264,33 +156,22 @@ class SiteController extends BaseController
         }
 
         //contest
-        $contestNews = $cache->get('contest_news_home');
-        if ($contestNews === false) {
-            $contestNews = News::search([
-                'contest' => 1,
+        $hotNews = $cache->get('hot_news_home');
+        if ($hotNews === false) {
+            $hotNews = News::search([
                 'status' => NEWS_STATUS_PUBLISHED,
                 'news.type' => [0, 1, 3, 4],
-            ], 0, 5, ['news.id' => SORT_DESC]);
-            $cache->set('contest_news_home', $contestNews, 30);
+            ], 0, 5, ['news.view_count' => SORT_DESC]);
+            $cache->set('hot_news_home', $hotNews, 30);
         }
-//        echo '6: '. date('Y/m/d H:i:s', time()) . '</br>';
-
-//        die();
 
         return $this->render('index', [
             'categories' => $categories,
-            'categoryHot' => $categoryHot,
-            'newsHot' => $newsHot,
-            'videosHot' => $videosHot,
-            'videosHotView' => $videosHotView,
-            'videosHotComment' => $videosHotComment,
             'lefts' => $lefts,
             'rights' => $rights,
-            'videos' => $videos,
             'ads' => $adsWithKey,
-            'dailyNews' => $dailyNews,
             'lastestNews' => $lastestNews,
-            'contestNews' => $contestNews,
+            'hotNews' => $hotNews,
         ]);
     }
 

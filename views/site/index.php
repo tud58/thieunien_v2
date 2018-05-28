@@ -152,7 +152,7 @@ $this->title = 'Thiếu niên';
                     <div class="row">
                         <?php if (count($lefts[1]->news) >=1) {
                             $count = 0; ?>
-                            <div class="col-sm-8">
+                            <div class="col-sm-8" style="padding-right: 0; ">
                                 <?php foreach ($lefts[1]->news as $n) { ?>
                                     <?php if ($count >= 0 && $count <= 3 ) {?>
                                         <div class="news-item col-sm-6">
@@ -244,7 +244,7 @@ $this->title = 'Thiếu niên';
                         <a href="/danh-muc/<?= $lefts[2]['slug'] ?>">
                             <span class="category-parent"><strong> <?= $lefts[2]->name ?></strong></span>
                         </a>
-                        <div class="line-right-title"></div>
+                        <div class="line-right-title" style="width: 80%; "></div>
                     </h3>
 
                     <div class="row">
@@ -287,7 +287,7 @@ $this->title = 'Thiếu niên';
                             </div>
                             <?php if (count($lefts[2]->news) > 8) { ?>
                                 <div class="row slide-news">
-                                    <div id="group-news-slide-2" class="owl-carousel home">
+                                    <div id="group-news-slide-3" class="owl-carousel">
                                         <?php foreach ($lefts[2]->news as $k => $n) { ?>
                                             <?php if ($k > 7) { ?>
                                                 <div class="item">
@@ -344,7 +344,7 @@ $this->title = 'Thiếu niên';
                         <a href="/danh-muc/<?= $lefts[3]['slug'] ?>">
                             <span class="category-parent"><strong> <?= $lefts[3]->name ?></strong></span>
                         </a>
-                        <div class="line-right-title"></div>
+                        <div class="line-right-title" style="width: 80%; "></div>
                     </h3>
 
                     <div class="row">
@@ -365,9 +365,9 @@ $this->title = 'Thiếu niên';
                                 <div class="news-item">
                                     <a href="/tin-tuc/<?= $nl3[1]->slug ?>">
                                         <h5>
-                                            <strong class="f-title">
+                                            <p class="f-title">
                                                 <?= $nl3[1]->title . Functions::getNewsIcon($nl3[1]->type) ?>
-                                            </strong>
+                                            </p>
                                         </h5>
                                     </a>
                                 </div>
@@ -376,9 +376,9 @@ $this->title = 'Thiếu niên';
                                 <div class="news-item">
                                     <a href="/tin-tuc/<?= $nl3[2]->slug ?>">
                                         <h5>
-                                            <strong class="f-title">
+                                            <p class="f-title">
                                                 <?= $nl3[2]->title . Functions::getNewsIcon($nl3[2]->type) ?>
-                                            </strong>
+                                            </p>
                                         </h5>
                                     </a>
                                 </div>
@@ -401,9 +401,9 @@ $this->title = 'Thiếu niên';
                                 <div class="news-item">
                                     <a href="/tin-tuc/<?= $nl3[4]->slug ?>">
                                         <h5>
-                                            <strong class="f-title">
+                                            <p class="f-title">
                                                 <?= $nl3[4]->title . Functions::getNewsIcon($nl3[4]->type) ?>
-                                            </strong>
+                                            </p>
                                         </h5>
                                     </a>
                                 </div>
@@ -412,9 +412,9 @@ $this->title = 'Thiếu niên';
                                 <div class="news-item">
                                     <a href="/tin-tuc/<?= $nl3[5]->slug ?>">
                                         <h5>
-                                            <strong class="f-title">
+                                            <p class="f-title">
                                                 <?= $nl3[5]->title . Functions::getNewsIcon($nl3[5]->type) ?>
-                                            </strong>
+                                            </p>
                                         </h5>
                                     </a>
                                 </div>
@@ -437,9 +437,9 @@ $this->title = 'Thiếu niên';
                                 <div class="news-item">
                                     <a href="/tin-tuc/<?= $nl3[7]->slug ?>">
                                         <h5>
-                                            <strong class="f-title">
+                                            <p class="f-title">
                                                 <?= $nl3[7]->title . Functions::getNewsIcon($nl3[7]->type) ?>
-                                            </strong>
+                                            </p>
                                         </h5>
                                     </a>
                                 </div>
@@ -448,9 +448,9 @@ $this->title = 'Thiếu niên';
                                 <div class="news-item">
                                     <a href="/tin-tuc/<?= $nl3[8]->slug ?>">
                                         <h5>
-                                            <strong class="f-title">
+                                            <p class="f-title">
                                                 <?= $nl3[8]->title . Functions::getNewsIcon($nl3[8]->type) ?>
-                                            </strong>
+                                            </p>
                                         </h5>
                                     </a>
                                 </div>
@@ -496,15 +496,15 @@ $this->title = 'Thiếu niên';
                     </div>
                 </div>
             <?php } ?>
-            <?php if (isset($lastestNews) && $lastestNews) { ?>
+            <?php if (isset($hotNews) && $hotNews) { ?>
                 <section id="business-news">
                     <h3 class="text-uppercase text-center">
                         <a>
-                            <strong class="text-gradiant"> Tin mới nhất</strong>
+                            <strong class="text-gradiant"> Tin đọc nhiều</strong>
                         </a>
                     </h3>
                     <ul class="list-unstyled right-news-list right-news-list-2">
-                        <?php foreach ($lastestNews as $k => $n) { ?>
+                        <?php foreach ($hotNews as $k => $n) { ?>
                             <li>
                                 <a href="/tin-tuc/<?= $n->slug ?>">
                                     <img src="<?= HOST. $n->logo ?>">
@@ -552,25 +552,23 @@ $this->title = 'Thiếu niên';
                     </div>
                 </div>
             <?php } ?>
-            <?php if (isset($rights[0]) && $rights[0]->news) { ?>
+            <?php if (isset($lastestNews) && $lastestNews) { ?>
                 <section id="business-news">
                     <h3 class="text-uppercase text-center">
-                        <a href="/danh-muc/<?= $rights[0]['slug'] ?>">
-                            <strong class="text-gradiant"><?= $rights[0]->name ?></strong>
+                        <a>
+                            <strong class="text-gradiant"> Tin mới nhất</strong>
                         </a>
                     </h3>
                     <ul class="list-unstyled right-news-list right-news-list-2">
-                        <?php foreach ($rights[0]->news as $k => $n) { ?>
-                            <?php if ($k < 4) { ?>
-                                <li>
-                                    <a href="/tin-tuc/<?= $n->slug ?>">
-                                        <img src="<?= HOST. $n->logo ?>">
-                                        <strong class="f-title">
-                                            <?= $n->title . Functions::getNewsIcon($n->type) ?>
-                                        </strong>
-                                    </a>
-                                </li>
-                            <?php } ?>
+                        <?php foreach ($lastestNews as $k => $n) { ?>
+                            <li>
+                                <a href="/tin-tuc/<?= $n->slug ?>">
+                                    <img src="<?= HOST. $n->logo ?>">
+                                    <strong class="f-title">
+                                        <?= $n->title . Functions::getNewsIcon($n->type) ?>
+                                    </strong>
+                                </a>
+                            </li>
                         <?php } ?>
                     </ul>
                 </section>
@@ -586,7 +584,7 @@ $this->title = 'Thiếu niên';
                     <a href="/danh-muc/<?= $lefts[4]['slug'] ?>">
                         <span class="category-parent"><strong> <?= $lefts[4]->name ?></strong></span>
                     </a>
-                    <div class="line-right-title"></div>
+                    <div class="line-right-title" style="width: 86%; "></div>
                 </h3>
 
                 <div class="row">
@@ -639,7 +637,7 @@ $this->title = 'Thiếu niên';
                     </div>
                 </div>
                 <?php if (count($lefts[4]->news) > 3) { ?>
-                    <div id="group-news-slide-2" class="owl-carousel home">
+                    <div id="group-news-slide-6" class="owl-carousel">
                         <?php foreach ($lefts[4]->news as $k => $n) { ?>
                             <?php if ($k > 2) { ?>
                                 <div class="item">
@@ -674,7 +672,7 @@ $this->title = 'Thiếu niên';
                         <a href="/danh-muc/<?= $lefts[5]['slug'] ?>">
                             <span class="category-parent"><strong> <?= $lefts[5]->name ?></strong></span>
                         </a>
-                        <div class="line-right-title"></div>
+                        <div class="line-right-title" style="width: 75%; "></div>
                     </h3>
 
                     <div class="row">
@@ -705,7 +703,7 @@ $this->title = 'Thiếu niên';
                         <a href="/danh-muc/<?= $lefts[6]['slug'] ?>">
                             <span class="category-parent"><strong> <?= $lefts[6]->name ?></strong></span>
                         </a>
-                        <div class="line-right-title"></div>
+                        <div class="line-right-title" style="width: 78%; "></div>
                     </h3>
 
                     <div class="row">
@@ -777,7 +775,7 @@ $this->title = 'Thiếu niên';
                     <a href="/danh-muc/<?= $lefts[7]['slug'] ?>">
                         <span class="category-parent"><strong> <?= $lefts[7]->name ?></strong></span>
                     </a>
-                    <div class="line-right-title"></div>
+                    <div class="line-right-title" style="width: 81%; "></div>
                 </h3>
 
                 <div class="row">
@@ -799,9 +797,9 @@ $this->title = 'Thiếu niên';
                             <div class="news-item">
                                 <a href="/tin-tuc/<?= $nl7[1]->slug ?>">
                                     <h5>
-                                        <strong class="f-title">
+                                        <p class="f-title">
                                             <?= $nl7[1]->title . Functions::getNewsIcon($nl7[1]->type) ?>
-                                        </strong>
+                                        </p>
                                     </h5>
                                 </a>
                             </div>
@@ -811,9 +809,9 @@ $this->title = 'Thiếu niên';
                             <div class="news-item">
                                 <a href="/tin-tuc/<?= $nl7[2]->slug ?>">
                                     <h5>
-                                        <strong class="f-title">
+                                        <p class="f-title">
                                             <?= $nl7[2]->title . Functions::getNewsIcon($nl7[2]->type) ?>
-                                        </strong>
+                                        </p>
                                     </h5>
                                 </a>
                             </div>
@@ -837,9 +835,9 @@ $this->title = 'Thiếu niên';
                             <div class="news-item">
                                 <a href="/tin-tuc/<?= $nl7[4]->slug ?>">
                                     <h5>
-                                        <strong class="f-title">
+                                        <p class="f-title">
                                             <?= $nl7[4]->title . Functions::getNewsIcon($nl7[4]->type) ?>
-                                        </strong>
+                                        </p>
                                     </h5>
                                 </a>
                             </div>
@@ -849,9 +847,9 @@ $this->title = 'Thiếu niên';
                             <div class="news-item">
                                 <a href="/tin-tuc/<?= $nl7[5]->slug ?>">
                                     <h5>
-                                        <strong class="f-title">
+                                        <p class="f-title">
                                             <?= $nl7[5]->title . Functions::getNewsIcon($nl7[5]->type) ?>
-                                        </strong>
+                                        </p>
                                     </h5>
                                 </a>
                             </div>
@@ -875,9 +873,9 @@ $this->title = 'Thiếu niên';
                             <div class="news-item">
                                 <a href="/tin-tuc/<?= $nl7[7]->slug ?>">
                                     <h5>
-                                        <strong class="f-title">
+                                        <p class="f-title">
                                             <?= $nl7[7]->title . Functions::getNewsIcon($nl7[7]->type) ?>
-                                        </strong>
+                                        </p>
                                     </h5>
                                 </a>
                             </div>
@@ -887,9 +885,9 @@ $this->title = 'Thiếu niên';
                             <div class="news-item">
                                 <a href="/tin-tuc/<?= $nl7[8]->slug ?>">
                                     <h5>
-                                        <strong class="f-title">
+                                        <p class="f-title">
                                             <?= $nl7[8]->title . Functions::getNewsIcon($nl7[8]->type) ?>
-                                        </strong>
+                                        </p>
                                     </h5>
                                 </a>
                             </div>
@@ -898,6 +896,7 @@ $this->title = 'Thiếu niên';
                 </div>
             </section>
         <?php } ?>
+        <hr class="w2 m10"/>
     </div>
 
     <div class="row">

@@ -124,7 +124,7 @@ h3 strong.text-gradiant {
 .owl-prev, .owl-next {
     width: 25px;
     height: 80px;
-    top: 3px;
+    top: 20px;
     position: absolute;
     color: #fff;
     text-align: center;
@@ -366,7 +366,7 @@ h3 strong.text-gradiant {
 }
 
 .f-description {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 #carousel-home .carousel-indicators li {
@@ -489,7 +489,7 @@ hr {
 }
 
 b, strong {
-    font-weight: 500;
+    font-weight: 300;
 }
 
 #focus-week .tabs-header li a:focus {
@@ -670,7 +670,8 @@ div.padding-left-5 {
 
 .header-block {
     position: relative;
-    padding-bottom: 10px
+    padding-bottom: 10px;
+    padding-left: 0;
 }
 
 header .nav li:hover strong {
@@ -815,6 +816,4 @@ h3.df {
 
 .footer-content .logo-footer {
     padding-left: 0;
-    padding-right: 30px;
-    padding-top: 15px;
 }

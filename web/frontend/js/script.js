@@ -268,11 +268,11 @@ $(document).ready(function () {
     $(".owl-carousel.home").owlCarousel(setting);
 
     setting['items'] = 6;
-    $(".owl-carousel.video").owlCarousel(setting);
+    $("#group-news-slide-6").owlCarousel(setting);
 
     setting['items'] = 3;
     setting['dots'] = false;
-    $(".owl-carousel.daily-hot").owlCarousel(setting);
+    $("#group-news-slide-3").owlCarousel(setting);
 
     setting['items'] = 4;
     setting['dots'] = false;
